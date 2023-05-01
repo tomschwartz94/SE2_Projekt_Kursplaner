@@ -1,5 +1,7 @@
 package com.se2.kursplaner.model;
 
-public class TerminRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TerminRepository extends JpaRepository<Termin, Long> {
     
 }

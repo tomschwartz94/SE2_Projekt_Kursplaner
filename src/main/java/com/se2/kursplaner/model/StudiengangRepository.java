@@ -1,5 +1,7 @@
 package com.se2.kursplaner.model;
 
-public class StudiengangRepository {
-    
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudiengangRepository extends JpaRepository<Studiengang, Long> {
+
 }
