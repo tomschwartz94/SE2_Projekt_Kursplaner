@@ -1,13 +1,16 @@
 package com.se2.kursplaner.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@Data
 public class Studiengang {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotNull
@@ -19,26 +22,10 @@ public class Studiengang {
     private String kuerzel;
 
 //    @OneToMany(cascade = CascadeType.ALL)
-//    private Modul modul;
+//    private List<Modul> module;
 
     public Studiengang(String name, String kuerzel){
         this.name = name;
-        this.kuerzel = kuerzel;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public String getKuerzel(){
-        return kuerzel;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setKuerzel(String kuerzel){
         this.kuerzel = kuerzel;
     }
 }
