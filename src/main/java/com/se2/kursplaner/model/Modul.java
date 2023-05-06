@@ -2,16 +2,18 @@ package com.se2.kursplaner.model;
 
 import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.util.Assert;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Modul {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

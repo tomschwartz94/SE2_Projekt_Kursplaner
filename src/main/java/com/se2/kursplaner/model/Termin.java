@@ -1,12 +1,16 @@
 package com.se2.kursplaner.model;
 
+import lombok.AccessLevel;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
 @Entity
 @Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Termin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
