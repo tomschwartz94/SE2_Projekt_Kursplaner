@@ -1,0 +1,7 @@
+.combined-dropdown {
+  margin: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
