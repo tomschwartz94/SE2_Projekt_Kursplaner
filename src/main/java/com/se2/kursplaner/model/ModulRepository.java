@@ -8,5 +8,5 @@ import java.util.Optional;
 @Repository
 public interface ModulRepository extends JpaRepository<Modul, Long> {
     Optional<Modul> findByStudiengang(Studiengang studiengang);
-    Optional<Modul> findByName(String name);
+    Modul findByName(String name);
 }
