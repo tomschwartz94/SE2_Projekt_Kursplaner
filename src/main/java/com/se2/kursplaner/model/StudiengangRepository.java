@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public interface StudiengangRepository extends JpaRepository<Studiengang, Long> {
-    List<Studiengang> findByName(String name);
+    Studiengang findByName(String name);
 
     List<Studiengang> findAll();
 
