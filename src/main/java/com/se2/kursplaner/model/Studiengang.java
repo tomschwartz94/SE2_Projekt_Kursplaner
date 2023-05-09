@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -24,8 +26,8 @@ public class Studiengang {
     @Size(min = 1, max = 5)
     private String kuerzel;
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    private List<Modul> module;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Modul> module;
 
     public Studiengang(String name, String kuerzel){
         this.name = name;

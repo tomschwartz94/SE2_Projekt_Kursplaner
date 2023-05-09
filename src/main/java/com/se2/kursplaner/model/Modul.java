@@ -27,10 +27,13 @@ public class Modul {
     @Size(min = 1, max = 15)
     private String kuerzel;
 
+
+    private Integer semester;
+
     @ManyToOne
     private Studiengang studiengang;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @Setter(AccessLevel.NONE)
     private List<Termin> termine;
 
