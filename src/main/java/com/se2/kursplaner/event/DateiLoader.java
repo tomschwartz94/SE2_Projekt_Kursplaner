@@ -45,6 +45,7 @@ public class DateiLoader implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         JSONParser jsonParser = new JSONParser();
+        System.out.print("LOAD START");
         
         try (FileReader reader = new FileReader("./config.json"))
         {
@@ -98,6 +99,7 @@ public class DateiLoader implements CommandLineRunner{
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.print("LOAD END");
     }
 
     private static void addTermine(List<Pair<Date, Date>> termineListel, Modul modul, TerminRepository terminRepository){
