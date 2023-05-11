@@ -37,9 +37,10 @@ public class Modul {
     @Setter(AccessLevel.NONE)
     private List<Termin> termine;
 
-    public Modul(String name, String kuerzel, Studiengang studiengang){
+    public Modul(String name, String kuerzel, Integer semester, Studiengang studiengang){
         this.name = name;
         this.kuerzel = kuerzel;
+        this.semester = semester;
         this.studiengang = studiengang;
     }
 
