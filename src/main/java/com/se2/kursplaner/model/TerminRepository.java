@@ -8,5 +8,5 @@ import java.util.Optional;
 @Repository
 public interface TerminRepository extends JpaRepository<Termin, Long> {
     Optional<Termin> findByModul(Modul modul);
-    
+
 }
