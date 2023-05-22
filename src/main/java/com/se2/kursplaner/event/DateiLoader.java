@@ -88,7 +88,6 @@ public class DateiLoader implements CommandLineRunner{
                         modulData = new Modul(modulName, modulKuerzel, studiengangData, semester);
                         modulRepository.save(modulData);
                         List<Pair<Date, Date>> terminListe = DateiLoader.extraktKalenderDaten(path);
-                        System.out.print(terminListe.toString());
                         DateiLoader.addTermine(terminListe, modulData, terminRepository);
                         modulRepository.save(modulData);
                     }
@@ -109,8 +108,8 @@ public class DateiLoader implements CommandLineRunner{
             Date start = (Date) pair.getValue(0);
             Date ende = (Date) pair.getValue(1);
             termin = new Termin(start, ende, modul);
-
             terminRepository.save(termin);
+            //System.out.print(termin);
             modul.addTermin(termin);
         }
     }
@@ -118,20 +117,29 @@ public class DateiLoader implements CommandLineRunner{
     private static List<Pair<Date, Date>> extraktKalenderDaten(String path) throws FileNotFoundException, IOException, ParserException{
         List<Pair<Date, Date>> terminList = new LinkedList<>();
 
-        CalendarBuilder builder = new CalendarBuilder();
-        Calendar calendar = builder.build(new UnfoldingReader(new FileReader(path), true));
+        try {
+            CalendarBuilder builder = new CalendarBuilder();
+            Calendar calendar = builder.build(new UnfoldingReader(new FileReader(path), true));
 
-        for (final Object o : calendar.getComponents()) {
-            net.fortuna.ical4j.model.Component component = (net.fortuna.ical4j.model.Component)o;
-            
-            if (component.getName().equals("VEVENT")) {
-                DtStart start = (DtStart) component.getProperty(DtStart.DTSTART);
-                DtEnd ende = (DtEnd) component.getProperty(DtEnd.DTEND);
-                Pair<Date, Date> termin = new Pair<Date, Date>(start.getDate(), ende.getDate());
-                terminList.add(termin);
+            for (final Object o : calendar.getComponents()) {
+                net.fortuna.ical4j.model.Component component = (net.fortuna.ical4j.model.Component)o;
+                
+                if (component.getName().equals("VEVENT")) {
+                    DtStart start = (DtStart) component.getProperty(DtStart.DTSTART);
+                    DtEnd ende = (DtEnd) component.getProperty(DtEnd.DTEND);
+                    Pair<Date, Date> termin = new Pair<Date, Date>(start.getDate(), ende.getDate());
+                    terminList.add(termin);
+                }
             }
-        }
 
-        return terminList;
+            return terminList;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        
+
+        
     }
 }
