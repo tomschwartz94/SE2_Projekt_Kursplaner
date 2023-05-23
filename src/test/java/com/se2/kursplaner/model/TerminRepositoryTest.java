@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,11 +47,11 @@ public class TerminRepositoryTest {
         modul3 = new Modul("Modul3", "m3", 2, studiengang);
         modulRepository.save(modul3);
 
-        termin1 = new Termin(LocalDateTime.of(2023, 8, 8, 8, 30), LocalDateTime.of(2023, 8, 8, 12, 30), modul1);
+        termin1 = new Termin(new Date(2023, Calendar.SEPTEMBER, 8, 8, 30), new Date(2023, Calendar.SEPTEMBER, 8, 12, 30), modul1);
         terminRepository.save(termin1);
-        termin2 = new Termin(LocalDateTime.of(2023, 8, 10, 14, 30), LocalDateTime.of(2023, 8, 10, 17, 0), modul1);
+        termin2 = new Termin(new Date(2023, Calendar.SEPTEMBER, 10, 14, 30), new Date(2023, Calendar.SEPTEMBER, 10, 17, 0), modul1);
         terminRepository.save(termin2);
-        termin3 = new Termin(LocalDateTime.of(2023, 8, 10, 14, 30), LocalDateTime.of(2023, 8, 10, 17, 0), modul2);
+        termin3 = new Termin(new Date(2023, Calendar.SEPTEMBER, 10, 14, 30), new Date(2023, Calendar.SEPTEMBER, 10, 17, 0), modul2);
         terminRepository.save(termin3);
     }
 
