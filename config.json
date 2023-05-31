@@ -1,0 +1,150 @@
+{
+    "data":[
+        {
+            "StudingangName": "Angewante Informatik",
+            "StudiengangKuerzel": "AI",
+            "module": [
+                {
+                    "modulName":"Intelligente Systeme",
+                    "modulKuerzel":"IS",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/BAI4-IS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Software Engineerin",
+                    "modulKuerzel":"SE2",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/BAI4-SE2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Rechnernetze",
+                    "modulKuerzel":"RN",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/BAI4-RN.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Betriebswirtschaftslehre",
+                    "modulKuerzel":"BW1",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/BAI1-BW1-BWЪ1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Diskrete Mathematik",
+                    "modulKuerzel":"DM",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/BAI1-DM.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Grundlagen der Informatik",
+                    "modulKuerzel":"GI",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/BAI1-GI.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Programmiermethodik 1 und Programmiertechnik",
+                    "modulKuerzel":"PM1 PT",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/BAI1-PM1-PT.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Automatentheorie und Formale Sprachen",
+                    "modulKuerzel":"AF",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/BAI2-AF-AFЪ.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Datenbanken",
+                    "modulKuerzel":"DB",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/BAI2-DB.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Logik und Berechenbarkeiten",
+                    "modulKuerzel":"LB",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/BAI2-LB.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Programmiermethodik 2",
+                    "modulKuerzel":"PM2",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/BAI2-PM2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Rechnerstrukturen und maschinennahe Programmierung",
+                    "modulKuerzel":"RMP",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/BAI2-RMP.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Algorithmen und Datenstrukturen",
+                    "modulKuerzel":"AD",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/BAI3-AD.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Betriebssysteme",
+                    "modulKuerzel":"BS",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/BAI3-BS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Data Science",
+                    "modulKuerzel":"DS",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/BAI3-DS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Graphentheoretische Konzepte und Algorithmen",
+                    "modulKuerzel":"GKA",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/BAI3-GKA.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Software Engineering I",
+                    "modulKuerzel":"SE1",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/BAI3-SE1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Architektur von Informationssysteme",
+                    "modulKuerzel":"AI",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/BAI5-AI.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Verteilte Systeme",
+                    "modulKuerzel":"VS",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/BAI5-VS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"IT-Sicherheit",
+                    "modulKuerzel":"ITS",
+                    "semester": 6,
+                    "terminFile": "./data/kalender_datein/BAI6-ITS.ics",
+                    "load": "once"
+                }
+            ]
+        }
+    ]
+}

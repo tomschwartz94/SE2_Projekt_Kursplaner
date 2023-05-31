@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface ModulRepository extends JpaRepository<Modul, Long> {
     List<Modul> findByStudiengang(Studiengang studiengang);
-    List<Modul> findByName(String name);
+    Modul findByName(String name);
     List<Modul> findByStudiengangAndSemester(Studiengang studiengang, Integer semester);
 }

@@ -9,6 +9,8 @@ import org.springframework.util.Assert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -27,9 +29,6 @@ public class Modul {
     @Size(min = 1, max = 15)
     private String kuerzel;
 
-
-    private Integer semester;
-
     @ManyToOne
     private Studiengang studiengang;
 
@@ -37,11 +36,16 @@ public class Modul {
     @Setter(AccessLevel.NONE)
     private List<Termin> termine;
 
-    public Modul(String name, String kuerzel, Integer semester, Studiengang studiengang){
+    @NotNull
+    private int semester;
+
+    public Modul(String name, String kuerzel, Studiengang studiengang, int semester){
         this.name = name;
         this.kuerzel = kuerzel;
         this.semester = semester;
         this.studiengang = studiengang;
+        this.semester = semester;
+        this.termine = new LinkedList<>();
     }
 
     public boolean addTermin(Termin termin){
