@@ -40,11 +40,11 @@ public class TerminRepositoryTest {
         studiengang = new Studiengang("Studiengang", "st");
         studiengangRepository.save(studiengang);
 
-        modul1 = new Modul("Modul1", "m1", 3, studiengang);
+        modul1 = new Modul("Modul1", "m1", studiengang, 3);
         modulRepository.save(modul1);
-        modul2 = new Modul("Modul2", "m2", 2, studiengang);
+        modul2 = new Modul("Modul2", "m2", studiengang, 2);
         modulRepository.save(modul2);
-        modul3 = new Modul("Modul3", "m3", 2, studiengang);
+        modul3 = new Modul("Modul3", "m3", studiengang, 2);
         modulRepository.save(modul3);
 
         termin1 = new Termin(new Date(2023, Calendar.SEPTEMBER, 8, 8, 30), new Date(2023, Calendar.SEPTEMBER, 8, 12, 30), modul1);

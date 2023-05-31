@@ -35,11 +35,11 @@ public class ModulRepositoryTest {
         studiengang3 = new Studiengang("Studiengang3", "st3");
         studiengangRepository.save(studiengang3);
 
-        modul1 = new Modul("Modul1", "m1", 2, studiengang1);
+        modul1 = new Modul("Modul1", "m1",  studiengang1, 2);
         modulRepository.save(modul1);
-        modul2 = new Modul("Modul2", "m2", 3, studiengang2);
+        modul2 = new Modul("Modul2", "m2", studiengang2, 3);
         modulRepository.save(modul2);
-        modul3 = new Modul("Modul3", "m3", 3, studiengang2);
+        modul3 = new Modul("Modul3", "m3", studiengang2, 3);
         modulRepository.save(modul3);
     }
 
