@@ -1,5 +1,13 @@
 package com.se2.kursplaner.model;
 
-public class ModulRepository {
-    
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ModulRepository extends JpaRepository<Modul, Long> {
+    List<Modul> findByStudiengang(Studiengang studiengang);
+    List<Modul> findByName(String name);
+    List<Modul> findByStudiengangAndSemester(Studiengang studiengang, Integer semester);
 }
