@@ -29,7 +29,7 @@
                     "modulName":"Betriebswirtschaftslehre",
                     "modulKuerzel":"BW1",
                     "semester": 1,
-                    "terminFile": "./data/kalender_datein/BAI1-BW1-BWЪ1.ics",
+                    "terminFile": "./data/kalender_datein/BAI1-BW1-BW1.ics",
                     "load": "once"
                 },
                 {
@@ -57,7 +57,7 @@
                     "modulName":"Automatentheorie und Formale Sprachen",
                     "modulKuerzel":"AF",
                     "semester": 2,
-                    "terminFile": "./data/kalender_datein/BAI2-AF-AFЪ.ics",
+                    "terminFile": "./data/kalender_datein/BAI2-AF-AF.ics",
                     "load": "once"
                 },
                 {
