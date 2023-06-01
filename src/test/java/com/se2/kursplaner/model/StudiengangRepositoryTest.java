@@ -31,23 +31,24 @@ public class StudiengangRepositoryTest {
 
     @AfterEach
     public void tearDown(){
-        studiengangRepository.deleteAll();
+        studiengangRepository.delete(studiengang1);
+        studiengangRepository.delete(studiengang2);
     }
 
     @Test
     public void findByName_Success(){
-        //assertThat(studiengangRepository.findByName(studiengang1.getName())).hasSize(1);
-        //assertThat(studiengangRepository.findByName(studiengang2.getName())).hasSize(1);
+        assertThat(studiengangRepository.findByName(studiengang1.getName())).isNotNull();
+        assertThat(studiengangRepository.findByName(studiengang2.getName())).isNotNull();
     }
 
     @Test
     public void findByName_Success_Empty(){
         String name = "Doesn't exist";
-        //assertThat(studiengangRepository.findByName(name).isEmpty()).isTrue();
+        assertThat(studiengangRepository.findByName(name)).isNull();
     }
 
     @Test
     public void findAll_Success(){
-        assertThat(studiengangRepository.findAll()).hasSize(2);
+        assertThat(studiengangRepository.findAll()).hasSize(3);
     }
 }
