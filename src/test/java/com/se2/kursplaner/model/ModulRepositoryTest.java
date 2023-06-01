@@ -66,9 +66,9 @@ public class ModulRepositoryTest {
         String modul2_name = modul2.getName();
         String modul3_name = modul3.getName();
 
-        //assertThat(modulRepository.findByName(modul1_name)).hasSize(1);
-        //assertThat(modulRepository.findByName(modul2_name)).hasSize(1);
-        //assertThat(modulRepository.findByName(modul3_name)).hasSize(1);
+        assertThat(modulRepository.findByName(modul1_name)).isNotNull();
+        assertThat(modulRepository.findByName(modul2_name)).isNotNull();
+        assertThat(modulRepository.findByName(modul3_name)).isNotNull();
 
     }
 
@@ -76,7 +76,7 @@ public class ModulRepositoryTest {
     public void findByName_Sucess_Empty(){
         String modul_name = "Nothing";
 
-        //assertThat(modulRepository.findByName(modul_name)).isEmpty();
+        assertThat(modulRepository.findByName(modul_name)).isNull();
     }
 
     @Test
