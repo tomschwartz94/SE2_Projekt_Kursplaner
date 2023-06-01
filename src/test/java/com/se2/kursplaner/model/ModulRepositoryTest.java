@@ -45,8 +45,12 @@ public class ModulRepositoryTest {
 
     @AfterEach
     public void tearDown(){
-        modulRepository.deleteAll();
-        studiengangRepository.deleteAll();
+        modulRepository.delete(modul1);
+        modulRepository.delete(modul2);
+        modulRepository.delete(modul3);
+        studiengangRepository.delete(studiengang1);
+        studiengangRepository.delete(studiengang2);
+        studiengangRepository.delete(studiengang3);
     }
 
     @Test
