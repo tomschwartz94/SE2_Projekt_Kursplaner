@@ -31,7 +31,8 @@ public class StudiengangRepositoryTest {
 
     @AfterEach
     public void tearDown(){
-        studiengangRepository.deleteAll();
+        studiengangRepository.delete(studiengang1);
+        studiengangRepository.delete(studiengang2);
     }
 
     @Test
@@ -48,6 +49,6 @@ public class StudiengangRepositoryTest {
 
     @Test
     public void findAll_Success(){
-        assertThat(studiengangRepository.findAll()).hasSize(2);
+        assertThat(studiengangRepository.findAll()).hasSize(3);
     }
 }

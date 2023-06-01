@@ -57,9 +57,13 @@ public class TerminRepositoryTest {
 
     @AfterEach
     public void tearDown() {
-        terminRepository.deleteAll();
-        modulRepository.deleteAll();
-        studiengangRepository.deleteAll();
+        terminRepository.delete(termin1);
+        terminRepository.delete(termin2);
+        terminRepository.delete(termin3);
+        modulRepository.delete(modul1);
+        modulRepository.delete(modul2);
+        modulRepository.delete(modul3);
+        studiengangRepository.delete(studiengang);
     }
 
     @Test
