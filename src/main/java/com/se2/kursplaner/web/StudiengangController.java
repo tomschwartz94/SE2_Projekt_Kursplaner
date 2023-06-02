@@ -1,4 +1,4 @@
-package com.se2.kursplaner.controller;
+package com.se2.kursplaner.web;
 
 import com.se2.kursplaner.model.Studiengang;
 import com.se2.kursplaner.model.StudiengangRepository;
@@ -16,11 +16,37 @@ public class StudiengangController {
 
     @GetMapping
     public List<Studiengang> getAllStudiengang() {
+        System.out.println("Ich bin in getMethode");
         return studiengangRepository.findAll();
     }
 
-    @PostMapping
-    public Studiengang createStudiengang(@RequestBody Studiengang studiengang) {
-        return studiengangRepository.save(studiengang);
+    @GetMapping(path = "/create")
+    public Studiengang createStudiengang(@RequestParam String name, @RequestParam String kuerzel) {
+        Studiengang newStudiengang = new Studiengang(name, kuerzel);
+        return studiengangRepository.save(newStudiengang);
+    }
+
+//    @PostMapping
+//    public Studiengang createStudiengang(@RequestBody Studiengang studiengang) {
+//        System.out.println(studiengang.getName() +" " + studiengang.getKuerzel());
+//        return studiengangRepository.save(studiengang);
+//    }
+    @PutMapping("/{id}")
+    public Studiengang updateStudiengang(@RequestBody Studiengang newStudiengang, @PathVariable Long id) {
+        return studiengangRepository.findById(id)
+                .map(studiengang -> {
+                    studiengang.setName(newStudiengang.getName());
+                    studiengang.setKuerzel(newStudiengang.getKuerzel());
+                    return studiengangRepository.save(studiengang);
+                })
+                .orElseGet(() -> {
+                    newStudiengang.setId(id);
+                    return studiengangRepository.save(newStudiengang);
+                });
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteStudiengang(@PathVariable Long id) {
+        studiengangRepository.deleteById(id);
     }
 }

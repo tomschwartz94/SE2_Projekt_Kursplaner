@@ -23,4 +23,22 @@ public class TerminController {
     public Termin createTermin(@RequestBody Termin termin) {
         return terminRepository.save(termin);
     }
+    @PutMapping("/{id}")
+    public Termin updateTermin(@RequestBody Termin newTermin, @PathVariable Long id) {
+        return terminRepository.findById(id)
+                .map(termin -> {
+                    termin.setStart(newTermin.getStart());
+                    termin.setEnde(newTermin.getEnde());
+                    return terminRepository.save(termin);
+                })
+                .orElseGet(() -> {
+                    newTermin.setId(id);
+                    return terminRepository.save(newTermin);
+                });
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteTermin(@PathVariable Long id) {
+        terminRepository.deleteById(id);
+    }
 }

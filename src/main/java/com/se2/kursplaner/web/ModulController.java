@@ -23,4 +23,23 @@ public class ModulController {
     public Modul createModul(@RequestBody Modul modul) {
         return modulRepository.save(modul);
     }
+    @PutMapping("/{id}")
+    public Modul updateModul(@RequestBody Modul newModul, @PathVariable Long id) {
+        return modulRepository.findById(id)
+                .map(modul -> {
+                    modul.setName(newModul.getName());
+                    modul.setKuerzel(newModul.getKuerzel());
+                    modul.setSemester(newModul.getSemester());
+                    return modulRepository.save(modul);
+                })
+                .orElseGet(() -> {
+                    newModul.setId(id);
+                    return modulRepository.save(newModul);
+                });
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteModul(@PathVariable Long id) {
+        modulRepository.deleteById(id);
+    }
 }
