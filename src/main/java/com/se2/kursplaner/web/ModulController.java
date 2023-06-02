@@ -1,45 +1,31 @@
-package com.se2.kursplaner.controller;
+package com.se2.kursplaner.web;
 
 import com.se2.kursplaner.model.Modul;
-import com.se2.kursplaner.model.ModulRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.se2.kursplaner.model.Termin;
+
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/modul")
 public class ModulController {
 
-    @Autowired
-    private ModulRepository modulRepository;
 
-    @GetMapping
-    public List<Modul> getAllModul() {
-        return modulRepository.findAll();
-    }
 
-    @PostMapping
-    public Modul createModul(@RequestBody Modul modul) {
-        return modulRepository.save(modul);
-    }
-    @PutMapping("/{id}")
-    public Modul updateModul(@RequestBody Modul newModul, @PathVariable Long id) {
-        return modulRepository.findById(id)
-                .map(modul -> {
-                    modul.setName(newModul.getName());
-                    modul.setKuerzel(newModul.getKuerzel());
-                    modul.setSemester(newModul.getSemester());
-                    return modulRepository.save(modul);
-                })
-                .orElseGet(() -> {
-                    newModul.setId(id);
-                    return modulRepository.save(newModul);
-                });
+    // Endpoint to get all Module for a Studiengang
+    @GetMapping("/modul/{studiengangId}")
+    public List<Modul> getModuleByStudiengangId(@PathVariable Long studiengangId) {
+        // <TO-DO>: Add your implementation to return all Module for a Studiengang
+        return null;
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteModul(@PathVariable Long id) {
-        modulRepository.deleteById(id);
+    // Endpoint to get all Termine for a Modul
+    @GetMapping("/modul/termin/{moduleId}")
+    public List<Termin> getTermineByModulId(@PathVariable Long moduleId) {
+        // <TO-DO>: Add your implementation to return all Termine for a Modul
+        return null;
     }
+
+
 }
