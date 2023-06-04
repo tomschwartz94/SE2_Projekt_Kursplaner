@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/studiengang")
-public class StudiengangController {
+public class                                                  StudiengangController {
 
     @Autowired
     StudiengangService studiengangService;
