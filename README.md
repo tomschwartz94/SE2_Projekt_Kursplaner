@@ -1,9 +1,9 @@
 # SE2_Praktikum
 
-
 ## Info
 
 um den Server zu starten in den Hauptordner gehen und ./mvnw spring-boot:run -Pprod ausführen.
+
 ## Referenze
 
 - <https://developer.okta.com/blog/2022/06/17/simple-crud-react-and-spring-boot>
