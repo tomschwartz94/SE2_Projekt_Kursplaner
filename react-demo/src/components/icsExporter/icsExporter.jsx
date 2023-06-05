@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../dropdownns/css/button.css";
 class IcsExporter extends Component {
   constructor(props) {
     super(props);
@@ -7,7 +8,7 @@ class IcsExporter extends Component {
   render() {
     return (
       <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-primary" type="button">
+        <button class="btn btn-primary" type="button" className="export-button">
           Export as Ics file
         </button>
       </div>

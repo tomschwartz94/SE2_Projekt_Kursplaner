@@ -1,19 +1,25 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class SelectedModuleDisplayer extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="combined-dropdown">
-        <div id="mdiv">
-          <div class="mdiv">
-            <div class="md"></div>
-          </div>
-        </div>
-        <div>BA14</div>
-      </div>
-    );
+const SelectedModuleDisplayer = ({ option }) => {
+  const [isComponentVisible, setComponentVisible] = useState(true);
+
+  const handleClick = () => {
+    setComponentVisible(false);
+  };
+
+  if (!isComponentVisible) {
+    return null; // Return null to remove the component from the DOM
   }
-}
+  return (
+    <div className="combined-dropdown">
+      <div id="mdiv" onClick={handleClick}>
+        <div class="mdiv">
+          <div class="md"></div>
+        </div>
+      </div>
+      <div>{option}</div>
+    </div>
+  );
+};
 
 export default SelectedModuleDisplayer;
