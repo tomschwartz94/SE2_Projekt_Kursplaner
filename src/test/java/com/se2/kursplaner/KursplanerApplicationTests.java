@@ -10,7 +10,6 @@ class KursplanerApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertFalse(true);
 	}
 
 }
