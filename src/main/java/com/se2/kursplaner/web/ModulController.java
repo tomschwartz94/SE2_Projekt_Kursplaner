@@ -24,7 +24,7 @@ public class ModulController {
     private TerminService terminService;
 
     // Endpoint to get all Module for a Studiengang
-    @GetMapping("/modul/{studiengangId}")
+    @GetMapping("/{studiengangId}")
     public ResponseEntity<List<Modul>> getModuleByStudiengangId(@PathVariable Long studiengangId) {
         List<Modul> module = modulService.getModuleForStudiengang(studiengangId);
 
@@ -37,7 +37,7 @@ public class ModulController {
 
 
     // Endpoint to get all Termine for a Modul
-    @GetMapping("/modul/termin/{moduleId}")
+    @GetMapping("/termin/{moduleId}")
     public List<Termin> getTermineByModulId(@PathVariable Long moduleId) {
         return terminService.getTermineByModulId(moduleId);
     }

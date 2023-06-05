@@ -6,7 +6,7 @@ import lombok.Data;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Data
@@ -17,15 +17,15 @@ public class Termin {
     private Long id;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime start;
+    private Date start;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime ende;
+    private Date ende;
 
     @ManyToOne
     private Modul modul;
 
-    public Termin(LocalDateTime start, LocalDateTime ende, Modul modul){
+    public Termin(Date start, Date ende, Modul modul){
         this.start = start;
         this.ende = ende;
         this.modul = modul;

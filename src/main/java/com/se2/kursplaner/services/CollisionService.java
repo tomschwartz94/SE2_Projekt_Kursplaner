@@ -31,7 +31,7 @@ public class CollisionService {
     }
 
     private boolean checkOverlap(Termin t1, Termin t2) {
-        return t1.getStart().isBefore(t2.getEnde()) && t1.getEnde().isAfter(t2.getStart());
+        return t1.getStart().before(t2.getEnde()) && t1.getEnde().after(t2.getStart());
     }
 
 }
