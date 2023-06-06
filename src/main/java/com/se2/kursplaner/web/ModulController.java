@@ -1,6 +1,7 @@
 package com.se2.kursplaner.web;
 
 import com.se2.kursplaner.model.Modul;
+import com.se2.kursplaner.model.StudiengangRepository;
 import com.se2.kursplaner.model.Termin;
 
 
@@ -23,14 +24,21 @@ public class ModulController {
     @Autowired
     private TerminService terminService;
 
+    @Autowired
+    private StudiengangRepository studiengangRepository;
+
     // Endpoint to get all Module for a Studiengang
     @GetMapping("/{studiengangId}")
     public ResponseEntity<List<Modul>> getModuleByStudiengangId(@PathVariable Long studiengangId) {
+        if (studiengangRepository.existsById(studiengangId))
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
         List<Modul> module = modulService.getModuleForStudiengang(studiengangId);
 
         if (module.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
+
 
         return new ResponseEntity<>(module, HttpStatus.OK);
     }

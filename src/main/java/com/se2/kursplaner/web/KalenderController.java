@@ -7,6 +7,8 @@ import com.se2.kursplaner.model.Termin;
 import com.se2.kursplaner.model.TerminVal;
 import com.se2.kursplaner.services.CollisionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,8 +22,13 @@ public class KalenderController {
 
     // Endpoint to check for Termin collisions
     @PutMapping("/kalender/check")
-    public TerminVal checkTermine(@RequestBody List<Modul> module) {
-        return collisionService.checkTermine(module);
+    public ResponseEntity<TerminVal> checkTermine(@RequestBody List<Modul> module) {
+
+        if (module.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity<>(collisionService.checkTermine(module), HttpStatus.OK);
     }
 
     // Endpoint to export to .ics
