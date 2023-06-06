@@ -2,32 +2,47 @@ package com.se2.kursplaner.services;
 
 import com.se2.kursplaner.model.Modul;
 import com.se2.kursplaner.model.Termin;
+import com.se2.kursplaner.model.TerminError;
+import com.se2.kursplaner.model.TerminVal;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class CollisionService {
 
-    public List<Termin> checkTermine(List<Modul> module) {
-        List<Termin> overlappingTermines = new ArrayList<>();
-        List<Termin> allTermine = new ArrayList<>();
+    public TerminVal checkTermine(List<Modul> module) {
+
+        Map<Modul, List<Termin>> allTermine = new HashMap<>();
+
+        TerminVal terminVal = new TerminVal();
 
         for(Modul m : module) {
-            allTermine.addAll(m.getTermine());
+            allTermine.put(m, m.getTermine());
         }
+
+        List<List<Termin>> allValues = (List<List<Termin>>) allTermine.values();
 
         for(int i = 0; i < allTermine.size(); i++) {
             for(int j = i + 1; j < allTermine.size(); j++) {
-                if(checkOverlap(allTermine.get(i), allTermine.get(j))) {
-                    overlappingTermines.add(allTermine.get(i));
-                    overlappingTermines.add(allTermine.get(j));
+
+                for (Termin t1:allValues.get(i)){
+                    for (Termin t2:allValues.get(j)){
+                        if(checkOverlap(t1, t2)) {
+                            terminVal.getTermin_error().add(new TerminError(t1, t2));
+                            terminVal.setError_anzahl(terminVal.getError_anzahl()+1);
+
+                        }
+                    }
                 }
+
             }
         }
 
-        return overlappingTermines;
+        return terminVal;
     }
 
     private boolean checkOverlap(Termin t1, Termin t2) {
