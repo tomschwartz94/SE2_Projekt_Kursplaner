@@ -38,8 +38,7 @@ public class ModulController {
         if (module.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-
-
+        
         return new ResponseEntity<>(module, HttpStatus.OK);
     }
 
