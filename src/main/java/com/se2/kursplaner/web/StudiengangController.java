@@ -20,7 +20,7 @@ public class StudiengangController {
     StudiengangService studiengangService;
 
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Studiengang>> getAllStudiengange() {
         List<Studiengang> studiengange = studiengangService.getAllStudiengange();
 
