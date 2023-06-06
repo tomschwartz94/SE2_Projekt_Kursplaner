@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -46,11 +45,19 @@ public class TerminRepositoryTest {
         modul3 = new Modul("Modul3", "m3", studiengang, 2);
         modulRepository.save(modul3);
 
-        termin1 = new Termin(new Date(2023, Calendar.SEPTEMBER, 8, 8, 30), new Date(2023, Calendar.SEPTEMBER, 8, 12, 30), modul1);
+        Calendar start = Calendar.getInstance();
+        start.set(2023, Calendar.SEPTEMBER, 8, 8, 30);
+        Calendar end = Calendar.getInstance();
+        end.set(2023, Calendar.SEPTEMBER, 8, 12, 30);
+        termin1 = new Termin(start.getTime(), end.getTime(), modul1);
         terminRepository.save(termin1);
-        termin2 = new Termin(new Date(2023, Calendar.SEPTEMBER, 10, 14, 30), new Date(2023, Calendar.SEPTEMBER, 10, 17, 0), modul1);
+        start.set(2023, Calendar.SEPTEMBER, 10, 14, 30);
+        end.set(2023, Calendar.SEPTEMBER, 10, 17, 0);
+        termin2 = new Termin(start.getTime(), end.getTime(), modul1);
         terminRepository.save(termin2);
-        termin3 = new Termin(new Date(2023, Calendar.SEPTEMBER, 10, 14, 30), new Date(2023, Calendar.SEPTEMBER, 10, 17, 0), modul2);
+        start.set(2023, Calendar.SEPTEMBER, 10, 14, 30);
+        end.set(2023, Calendar.SEPTEMBER, 10, 17, 0);
+        termin3 = new Termin(start.getTime(), end.getTime(), modul2);
         terminRepository.save(termin3);
     }
 
@@ -74,6 +81,17 @@ public class TerminRepositoryTest {
     @Test
     public void findByModul_Success_Empty(){
         assertThat(terminRepository.findByModul(modul3)).isEmpty();
+    }
+
+    @Test
+    public void findByModulId_Success(){
+        assertThat(terminRepository.findByModulId(termin1.getModul().getId())).hasSize(2);
+        assertThat(terminRepository.findByModulId(termin3.getModul().getId())).hasSize(1);
+    }
+
+    @Test
+    public void findByModulId_Success_Empty(){
+        assertThat(terminRepository.findByModulId(modul3.getId())).isEmpty();
     }
 }
 

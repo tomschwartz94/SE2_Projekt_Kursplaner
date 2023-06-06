@@ -100,5 +100,14 @@ public class ModulRepositoryTest {
         assertThat(modulRepository.findByStudiengangAndSemester(studiengang_modul3, 1)).isEmpty();
     }
 
+    @Test
+    public void findByStudiengangId_Success(){
+        assertThat(modulRepository.findByStudiengangId(modul2.getStudiengang().getId())).hasSize(2);
+        assertThat(modulRepository.findByStudiengangId(modul1.getStudiengang().getId())).hasSize(1);
+    }
 
+    @Test
+    public void findByStudiengangId_Success_Empty(){
+        assertThat(modulRepository.findByStudiengangId(studiengang3.getId())).isEmpty();
+    }
 }
