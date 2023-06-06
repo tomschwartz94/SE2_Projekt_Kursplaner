@@ -12,38 +12,53 @@ import IcsExporter from "./components/icsExporter/icsExporter";
 import GeneralDropdown from "./components/dropdownns/bachelorDropdown";
 import Semester from "./components/dropdownns/semester";
 import Module from "./components/dropdownns/Modules";
+import SelectedModuleDisplayers from "./components/selectedModuleDisplayer/selectedModuledisplayers";
+import Bachelor from "./components/dropdownns/bachelorDropdown";
+import NestedSelect from "./components/dropdownns/Nestedselect";
+import DropdownForm from "./components/dropdownns/ParentComponent";
+import ParentComponent from "./components/dropdownns/ParentComponent";
+import ComponentA from "./components/dropdownns/ComponentA";
+import ComponentB from "./components/dropdownns/ComponentB";
+import "../src/components/dropdownns/css/displayfield.css";
+
+import { SelectedValuesProvider } from "./components/dropdownns/contexts/SelectedValuesContext";
+import Modules from "./components/dropdownns/Modules";
+import Mycontext, {
+  SelectedOptionsProvider,
+} from "./components/dropdownns/contexts/displayfieldContext";
+
+import "../src/components/dropdownns/css/button.css";
+import ConflictsDisplayerBoard from "./components/conflictsDisplayer/ConflictsDisplayerBoard";
+
 function App() {
   return (
     <React.Fragment>
       <Navbar />
       <main className="container">
-        <div className="combined-dropdown">
-          <GeneralDropdown />
-          <Semester />
-          <Module />
-          <SelectButton />
-        </div>
+        <SelectedValuesProvider>
+          <SelectedOptionsProvider>
+            <div className="combined-dropdown">
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex" }}>
+                  <NestedSelect />
+                  <Modules />
+                </div>
+                <div>
+                  <SelectedModuleDisplayers />
+                </div>
+              </div>
+            </div>
+          </SelectedOptionsProvider>
+        </SelectedValuesProvider>
+
         <div className="combined-dropdown">
           <div>
-            <div>
-              <p>Selected Modules:</p>
-              <SelectedModuleDisplayer />
-              <SelectedModuleDisplayer />
-              <SelectedModuleDisplayer />
-              <p>Click the X to remove a module</p>
-            </div>
             <div>
               <ConflictsDisplayer />
               <IcsExporter />
             </div>
           </div>
-
-          <form disabled>
-            <textarea disabled id="w3review" name="w3review" rows="4" cols="50">
-              This is just to display conflicts, don worry its gonna look better
-              .im just too busy to fix it now !!!
-            </textarea>
-          </form>
+          {/* <ConflictsDisplayerBoard /> */}
         </div>
       </main>
 

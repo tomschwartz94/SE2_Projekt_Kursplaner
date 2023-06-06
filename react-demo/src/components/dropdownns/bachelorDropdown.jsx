@@ -1,45 +1,53 @@
 import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 
-function GeneralDropdown() {
-  const [selectedValue, setSelectedValue] = useState("");
+class Bachelor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dict: {
+        awesome: ["wow", "alo"],
+        great: ["ano", "alo"],
+      },
+      selectedValue: "",
+    };
+  }
 
-  const handleSelect = (value) => {
-    setSelectedValue(value);
+  handleSelect = (value) => {
+    const { dict } = this.state;
+    const selectedDictValue = dict[value];
+
+    if (selectedDictValue) {
+      this.setState({ selectedValue: selectedDictValue });
+    } else {
+      this.setState({ selectedValue: "" });
+    }
   };
 
-  return (
-    <Dropdown onSelect={handleSelect}>
-      <Dropdown.Toggle>Bachelor Degree Course</Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item eventKey="Lecture">Lecture</Dropdown.Item>
-        <Dropdown.Item eventKey="Praktikum">Praktikum</Dropdown.Item>
-        <Dropdown.Item eventKey="Project">Projects</Dropdown.Item>
-      </Dropdown.Menu>
+  render() {
+    const { selectedValue } = this.state;
 
-      <p>{selectedValue}</p>
-    </Dropdown>
-  );
+    return (
+      <Dropdown onSelect={this.handleSelect}>
+        <Dropdown.Toggle>Bachelor Degree Course</Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item eventKey="awesome">Awesome</Dropdown.Item>
+          <Dropdown.Item eventKey="great">Great</Dropdown.Item>
+        </Dropdown.Menu>
+
+        {selectedValue && (
+          <div>
+            <h2>Selected Valuewww:</h2>
+            <ul>
+              {selectedValue.map((value, index) => (
+                <li key={index}>{value}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </Dropdown>
+    );
+  }
 }
 
-export default GeneralDropdown;
-
-// import Dropdown from "react-bootstrap/Dropdown";
-
-// function BasicExample() {
-//   return (
-//     <Dropdown>
-//       <Dropdown.Toggle variant="success" id="dropdown-basic">
-//         Dropdown Button
-//       </Dropdown.Toggle>
-
-//       <Dropdown.Menu>
-//         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-//         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-//         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-//       </Dropdown.Menu>
-//     </Dropdown>
-//   );
-// }
-
-// export default BasicExample;
+export default Bachelor;
