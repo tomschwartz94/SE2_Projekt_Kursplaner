@@ -1,8 +1,6 @@
 package com.se2.kursplaner.web;
 
 import com.se2.kursplaner.model.Modul;
-import com.se2.kursplaner.model.Termin;
-
 
 import com.se2.kursplaner.model.TerminVal;
 import com.se2.kursplaner.services.CollisionService;

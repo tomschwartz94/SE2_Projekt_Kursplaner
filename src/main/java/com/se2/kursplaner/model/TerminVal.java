@@ -1,10 +1,5 @@
 package com.se2.kursplaner.model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.Value;
-
 import java.util.ArrayList;
 import java.util.List;
 

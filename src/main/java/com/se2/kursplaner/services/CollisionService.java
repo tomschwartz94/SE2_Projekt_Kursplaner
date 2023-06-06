@@ -6,7 +6,6 @@ import com.se2.kursplaner.model.TerminError;
 import com.se2.kursplaner.model.TerminVal;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
