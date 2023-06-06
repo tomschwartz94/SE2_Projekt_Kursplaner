@@ -36,6 +36,7 @@ public class ModulControllerTest {
     private TerminRepository terminRepository;
 
     private Studiengang studiengang;
+    private Studiengang studiengang1;
     private Modul modul1;
     private Modul modul2;
     private Termin termin1;
@@ -45,16 +46,21 @@ public class ModulControllerTest {
     void setUp(){
         studiengang = new Studiengang("Studiengang1", "st1");
         studiengangRepository.save(studiengang);
+        studiengang1 = new Studiengang("Studiengang1.1", "st1.1");
+        studiengangRepository.save(studiengang1);
+
         modul1 = new Modul("Modul1", "m1", studiengang, 1);
         modulRepository.save(modul1);
         modul2 = new Modul("Modul2", "m2", studiengang, 2);
         modulRepository.save(modul2);
+
         Calendar start = Calendar.getInstance();
         start.set(2022, Calendar.DECEMBER, 3, 15,30);
         Calendar end = Calendar.getInstance();
         end.set(2022, Calendar.DECEMBER, 3, 18,30);
         termin1 = new Termin(start.getTime(), end.getTime(), modul1);
         terminRepository.save(termin1);
+
         start.set(2022, Calendar.DECEMBER, 10, 15,30);
         end.set(2022, Calendar.DECEMBER, 10, 18,30);
         termin2 = new Termin(start.getTime(), end.getTime(), modul1);
@@ -72,6 +78,7 @@ public class ModulControllerTest {
         modulRepository.delete(modul1);
         modulRepository.delete(modul2);
         studiengangRepository.delete(studiengang);
+        studiengangRepository.delete(studiengang1);
     }
 
     @Test
@@ -87,11 +94,22 @@ public class ModulControllerTest {
     }
 
     @Test
-    public void getModuleByStudiengangId_Failed(){
+    public void getModuleByStudiengangId_Failed_Studiengang_Not_Found(){
         given().
 
         when().
                 get("/api/modul/{studiengangId}", Integer.MAX_VALUE).
+
+        then().
+                statusCode(HttpStatus.BAD_REQUEST.value());
+    }
+
+    @Test
+    public void getModuleByStudiengangId_Failed_Studiengang_Without_Modul(){
+        given().
+
+        when().
+                get("/api/modul/{studiengangId}", studiengang1.getId()).
 
         then().
                 statusCode(HttpStatus.NO_CONTENT.value());

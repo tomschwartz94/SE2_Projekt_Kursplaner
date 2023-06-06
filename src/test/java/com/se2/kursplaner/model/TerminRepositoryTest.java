@@ -51,10 +51,12 @@ public class TerminRepositoryTest {
         end.set(2023, Calendar.SEPTEMBER, 8, 12, 30);
         termin1 = new Termin(start.getTime(), end.getTime(), modul1);
         terminRepository.save(termin1);
+
         start.set(2023, Calendar.SEPTEMBER, 10, 14, 30);
         end.set(2023, Calendar.SEPTEMBER, 10, 17, 0);
         termin2 = new Termin(start.getTime(), end.getTime(), modul1);
         terminRepository.save(termin2);
+
         start.set(2023, Calendar.SEPTEMBER, 10, 14, 30);
         end.set(2023, Calendar.SEPTEMBER, 10, 17, 0);
         termin3 = new Termin(start.getTime(), end.getTime(), modul2);

@@ -9,6 +9,7 @@ import com.se2.kursplaner.model.TerminVal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,8 @@ public class CollisionService {
             allTermine.put(m, terminRepository.findByModul(m));
         }
 
-        List<List<Termin>> allValues = (List<List<Termin>>) allTermine.values();
+//        List<List<Termin>> allValues = (List<List<Termin>>) allTermine.values();
+        List<List<Termin>> allValues = new ArrayList<>(allTermine.values());
 
         for(int i = 0; i < allTermine.size(); i++) {
             for(int j = i + 1; j < allTermine.size(); j++) {
