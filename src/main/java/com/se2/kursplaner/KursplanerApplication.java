@@ -14,18 +14,4 @@ public class KursplanerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KursplanerApplication.class, args);
 	}
-
-	@Bean
-	public CommandLineRunner demo(StudiengangRepository studiengangRepository) {
-		return (args) -> {
-			Studiengang studiengang = new Studiengang("Math", "MA");
-			studiengangRepository.save(studiengang);
-
-
-
-
-
-
-		};
-	}
 }
