@@ -1,0 +1,29 @@
+package com.se2.kursplaner.model;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.Value;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class TerminVal {
+    int error_anzahl = 0;
+
+    public int getError_anzahl() {
+        return error_anzahl;
+    }
+
+    public List<TerminError> getTermin_error() {
+        return termin_error;
+    }
+
+    public void setError_anzahl(int error_anzahl) {
+        this.error_anzahl = error_anzahl;
+    }
+
+    List<TerminError> termin_error = new ArrayList<>();
+}

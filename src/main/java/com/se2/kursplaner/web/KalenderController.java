@@ -4,6 +4,7 @@ import com.se2.kursplaner.model.Modul;
 import com.se2.kursplaner.model.Termin;
 
 
+import com.se2.kursplaner.model.TerminVal;
 import com.se2.kursplaner.services.CollisionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class KalenderController {
 
     // Endpoint to check for Termin collisions
     @PutMapping("/kalender/check")
-    public List<Termin> checkTermine(@RequestBody List<Modul> module) {
+    public TerminVal checkTermine(@RequestBody List<Modul> module) {
         return collisionService.checkTermine(module);
     }
 
