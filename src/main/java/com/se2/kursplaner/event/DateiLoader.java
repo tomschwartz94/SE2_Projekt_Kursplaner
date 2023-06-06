@@ -109,8 +109,6 @@ public class DateiLoader implements CommandLineRunner{
             Date ende = (Date) pair.getValue(1);
             termin = new Termin(start, ende, modul);
             terminRepository.save(termin);
-            //System.out.print(termin);
-            modul.addTermin(termin);
         }
     }
 

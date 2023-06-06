@@ -3,7 +3,10 @@ package com.se2.kursplaner.services;
 import com.se2.kursplaner.model.Modul;
 import com.se2.kursplaner.model.Termin;
 import com.se2.kursplaner.model.TerminError;
+import com.se2.kursplaner.model.TerminRepository;
 import com.se2.kursplaner.model.TerminVal;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -13,6 +16,9 @@ import java.util.Map;
 @Service
 public class CollisionService {
 
+    @Autowired
+    TerminRepository terminRepository;
+
     public TerminVal checkTermine(List<Modul> module) {
 
         Map<Modul, List<Termin>> allTermine = new HashMap<>();
@@ -20,7 +26,7 @@ public class CollisionService {
         TerminVal terminVal = new TerminVal();
 
         for(Modul m : module) {
-            allTermine.put(m, m.getTermine());
+            allTermine.put(m, terminRepository.findByModul(m));
         }
 
         List<List<Termin>> allValues = (List<List<Termin>>) allTermine.values();

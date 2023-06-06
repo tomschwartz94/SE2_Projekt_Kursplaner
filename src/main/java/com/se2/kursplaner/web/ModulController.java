@@ -30,7 +30,7 @@ public class ModulController {
     // Endpoint to get all Module for a Studiengang
     @GetMapping("/{studiengangId}")
     public ResponseEntity<List<Modul>> getModuleByStudiengangId(@PathVariable Long studiengangId) {
-        if (studiengangRepository.existsById(studiengangId))
+        if (!studiengangRepository.existsById(studiengangId))
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
         List<Modul> module = modulService.getModuleForStudiengang(studiengangId);

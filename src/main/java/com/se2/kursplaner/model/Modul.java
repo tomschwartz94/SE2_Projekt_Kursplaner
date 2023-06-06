@@ -3,15 +3,11 @@ package com.se2.kursplaner.model;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.util.Assert;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-import java.util.LinkedList;
-import java.util.List;
 
 @Entity
 @Data
@@ -32,10 +28,6 @@ public class Modul {
     @ManyToOne
     private Studiengang studiengang;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @Setter(AccessLevel.NONE)
-    private List<Termin> termine;
-
     @NotNull
     private int semester;
 
@@ -45,22 +37,6 @@ public class Modul {
         this.semester = semester;
         this.studiengang = studiengang;
         this.semester = semester;
-        this.termine = new LinkedList<>();
     }
 
-    public boolean addTermin(Termin termin){
-        // check preconditions
-        Assert.notNull(termin, "Parameter 'termin' can't be null!");
-
-        // check if module already has this termin
-        boolean moduleAlreadyHasTermin = termine.stream()
-                .anyMatch(t -> t.getId().equals(termin.getId()));
-
-        if (!moduleAlreadyHasTermin) {
-            termine.add(termin);
-            return true;
-        }
-
-        return false;
-    }
 }
