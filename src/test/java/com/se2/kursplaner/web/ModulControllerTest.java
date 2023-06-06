@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -46,9 +45,9 @@ public class ModulControllerTest {
     void setUp(){
         studiengang = new Studiengang("Studiengang1", "st1");
         studiengangRepository.save(studiengang);
-        modul1 = new Modul("Modul1", "m1", 1, studiengang);
+        modul1 = new Modul("Modul1", "m1", studiengang, 1);
         modulRepository.save(modul1);
-        modul2 = new Modul("Modul2", "m2", 2, studiengang);
+        modul2 = new Modul("Modul2", "m2", studiengang, 2);
         modulRepository.save(modul2);
         Calendar start = Calendar.getInstance();
         start.set(2022, Calendar.DECEMBER, 3, 15,30);
