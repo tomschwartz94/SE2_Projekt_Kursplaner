@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { useContext } from "react";
-import SelectedValuesContext from "./contexts/SelectedValuesContext";
 import { Dropdown } from "react-bootstrap";
 import "../dropdownns/css/nestedselect.css";
 import "../dropdownns/css/button.css";
-
 
 const semester = [1, 2, 3, 4, 5, 6];
 var semesterA;
 var moduleA;
 
-const NestedSelect = ({ onSelectedValuesChange }) => {
+const NestedSelect = () => {
 
   const [studiengaenge, setStudiengaenge] = useState([]);
-  var [module, setModule] = useState([]);
+  const [module, setModule] = useState(null);
 
   var [studiengangAnzeige, setStudiengangAnzeige] = useState('Studiengang');
+  var [studiengangAuswahl, setStudiengangAuswahl] = useState(null);
   var [semesterAnzeige, setSemesterAnzeige] = useState('Semester');
   var [modulAnzeige, setModulAnzeige] = useState('Modul');
 
-  useEffect(() => {
 
+  const fetchData = async (id) => {
+    try {
+      const response = await fetch('api/modul/'+ id);
+      const jsonData = await response.json();
+      setModule(jsonData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
     fetch('api/studiengang')
       .then(response => response.json())
       .then(data => {
@@ -28,24 +36,12 @@ const NestedSelect = ({ onSelectedValuesChange }) => {
       })
   }, []);
 
-  const [selectedOption, setSelectedOption] = useState("");
-  const [selectedSubOption, setSelectedSubOption] = useState("");
-  const [displayedValue, setDisplayedValue] = useState("");
-  const { selectedValues, setSelectedValues } = useContext(
-    SelectedValuesContext
-  );
-
   const auswahlStudiengang = (option) => {
-    setSelectedOption(option); //?
+    console.log(studiengaenge);
     setStudiengangAnzeige(option.name);
-    fetch('api/modul/'+ option.id)
-        .then(response => response.json())
-        .then(data => {
-          setModule(data);
-        })
-      
+    setStudiengangAuswahl(option);
     semesterA = [];
-    semester.map(sem => (
+    semester.map(sem => {
       semesterA.push(
       <Dropdown.Item
         className="togglebutton"
@@ -53,20 +49,27 @@ const NestedSelect = ({ onSelectedValuesChange }) => {
         onClick={() => auswahlSemester(sem)}
       >
         {sem}
-      </Dropdown.Item>)
-          
-      ))
-
+      </Dropdown.Item>)   
+    })
+    fetchData(option.id);
   };
 
   const auswahlSemester = (subOption) => {
     setSemesterAnzeige(subOption);
+    fetchData(studiengangAuswahl.id);
+    moduleA = [];
     module.map(modul =>{
       if(modul.semester == subOption){
-        moduleA.push(modul)
-      }
-    })
+        moduleA.push(<Dropdown.Item
+          className="togglebutton"
+          key={modul.name}
+          onClick={() => auswahlModul(modul)}
+        >
+          {modul.name}
+        </Dropdown.Item>)
+      }})
   };
+
   const auswahlModul = (subsubOption) => {};
   
   return (
@@ -114,15 +117,7 @@ const NestedSelect = ({ onSelectedValuesChange }) => {
             {modulAnzeige}
           </Dropdown.Toggle>
           <Dropdown.Menu>
-              {/* {moduleA.map(m =>(
-                <Dropdown.Item
-                className="togglebutton"
-                key={m.name}
-                onClick={() => auswahlModul(m)}
-              >
-                {m.name}
-              </Dropdown.Item>
-              ))} */}
+              {moduleA}
           </Dropdown.Menu>
         </Dropdown>
 

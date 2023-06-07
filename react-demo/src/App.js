@@ -20,7 +20,6 @@ import Mycontext, {
   SelectedOptionsProvider,
 } from "./components/dropdownns/contexts/displayfieldContext";
 import ConflictsDisplayerBoard from "./components/conflictsDisplayer/ConflictsDisplayerBoard";
-
 import "./index.css";
 import "./App.css";
 import "./components/dropdownns/css/dropdownCombined.css";
