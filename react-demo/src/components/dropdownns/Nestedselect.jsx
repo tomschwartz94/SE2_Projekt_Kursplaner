@@ -1,99 +1,33 @@
-// import React, { useState } from "react";
-// import { Dropdown } from "react-bootstrap";
-
-// import "../dropdownns/css/nestedselect.css";
-
-// const data = {
-//   option1: {
-//     subOption1: "Value 1-1",
-//     subOption2: "Value 1-2",
-//   },
-//   option2: {
-//     subOption1: "Value 2-1",
-//     subOption2: "Value 2-2",
-//   },
-// };
-
-// const NestedSelect = () => {
-//   const [selectedOption, setSelectedOption] = useState("");
-//   const [selectedSubOption, setSelectedSubOption] = useState("");
-//   const [displayedValue, setDisplayedValue] = useState("");
-
-//   const handleOptionChange = (option) => {
-//     setSelectedOption(option);
-//     setSelectedSubOption("");
-//     setDisplayedValue("");
-//   };
-
-//   const handleSubOptionChange = (subOption) => {
-//     setSelectedSubOption(subOption);
-//     setDisplayedValue(data[selectedOption][subOption]);
-//   };
-
-//   return (
-//     <div className="nested-select-container">
-//       <h1>Nested Select</h1>
-//       <div className="nested-select">
-//         <Dropdown>
-//           <Dropdown.Toggle variant="primary">Select Option</Dropdown.Toggle>
-//           <Dropdown.Menu>
-//             {Object.keys(data).map((option) => (
-//               <Dropdown.Item
-//                 key={option}
-//                 onClick={() => handleOptionChange(option)}
-//               >
-//                 {option}
-//               </Dropdown.Item>
-//             ))}
-//           </Dropdown.Menu>
-//         </Dropdown>
-
-//         {selectedOption && (
-//           <Dropdown>
-//             <Dropdown.Toggle variant="primary">
-//               Select Sub-Option
-//             </Dropdown.Toggle>
-//             <Dropdown.Menu>
-//               {Object.keys(data[selectedOption]).map((subOption) => (
-//                 <Dropdown.Item
-//                   key={subOption}
-//                   onClick={() => handleSubOptionChange(subOption)}
-//                 >
-//                   {subOption}
-//                 </Dropdown.Item>
-//               ))}
-//             </Dropdown.Menu>
-//           </Dropdown>
-//         )}
-//       </div>
-
-//       {displayedValue && (
-//         <div className="displayed-value">
-//           <h2>Selected Value:</h2>
-//           <p>{displayedValue}</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default NestedSelect;
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import SelectedValuesContext from "./contexts/SelectedValuesContext";
 import { Dropdown } from "react-bootstrap";
 import "../dropdownns/css/nestedselect.css";
 import "../dropdownns/css/button.css";
 
-const data = {
-  Vorlesung: {
-    semester1: ["DM", "PM1"],
-    semester2: ["AF", "PMP 2"],
-  },
-};
+
+const semester = [1, 2, 3, 4, 5, 6];
+var semesterA;
+var moduleA;
 
 const NestedSelect = ({ onSelectedValuesChange }) => {
+
+  const [studiengaenge, setStudiengaenge] = useState([]);
+  var [module, setModule] = useState([]);
+
+  var [studiengangAnzeige, setStudiengangAnzeige] = useState('Studiengang');
+  var [semesterAnzeige, setSemesterAnzeige] = useState('Semester');
+  var [modulAnzeige, setModulAnzeige] = useState('Modul');
+
+  useEffect(() => {
+
+    fetch('api/studiengang')
+      .then(response => response.json())
+      .then(data => {
+        setStudiengaenge(data);
+      })
+  }, []);
+
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedSubOption, setSelectedSubOption] = useState("");
   const [displayedValue, setDisplayedValue] = useState("");
@@ -101,19 +35,40 @@ const NestedSelect = ({ onSelectedValuesChange }) => {
     SelectedValuesContext
   );
 
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
-    setSelectedSubOption("");
-    setDisplayedValue("");
+  const auswahlStudiengang = (option) => {
+    setSelectedOption(option); //?
+    setStudiengangAnzeige(option.name);
+    fetch('api/modul/'+ option.id)
+        .then(response => response.json())
+        .then(data => {
+          setModule(data);
+        })
+      
+    semesterA = [];
+    semester.map(sem => (
+      semesterA.push(
+      <Dropdown.Item
+        className="togglebutton"
+        key={sem}
+        onClick={() => auswahlSemester(sem)}
+      >
+        {sem}
+      </Dropdown.Item>)
+          
+      ))
+
   };
 
-  const handleSubOptionChange = (subOption) => {
-    setSelectedSubOption(subOption);
-    const values = data[selectedOption][subOption];
-    setDisplayedValue(values);
-    setSelectedValues([...selectedValues, ...values]);
+  const auswahlSemester = (subOption) => {
+    setSemesterAnzeige(subOption);
+    module.map(modul =>{
+      if(modul.semester == subOption){
+        moduleA.push(modul)
+      }
+    })
   };
-
+  const auswahlModul = (subsubOption) => {};
+  
   return (
     <div className="nested-select-container">
       <div className="nested-select">
@@ -123,42 +78,54 @@ const NestedSelect = ({ onSelectedValuesChange }) => {
             className="togglebutton"
             style={{ borderRadius: "0" }}
           >
-            Studiengang
+            {studiengangAnzeige}
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            {Object.keys(data).map((option) => (
+            {studiengaenge.map(studiengang => (
               <Dropdown.Item
                 className="togglebutton"
-                key={option}
-                onClick={() => handleOptionChange(option)}
+                key={studiengang.name}
+                onClick={() => auswahlStudiengang(studiengang)}
               >
-                {option}
+                {studiengang.name}
               </Dropdown.Item>
             ))}
           </Dropdown.Menu>
         </Dropdown>
 
-        {selectedOption && (
-          <Dropdown>
-            <Dropdown.Toggle
-              className="togglebutton"
-              style={{ borderRadius: "0" }}
-            >
-              Semester
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              {Object.keys(data[selectedOption]).map((subOption) => (
+        <Dropdown>
+          <Dropdown.Toggle
+            className="togglebutton"
+            style={{ borderRadius: "0" }}
+          >
+            {semesterAnzeige}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            {semesterA}
+          </Dropdown.Menu>
+        </Dropdown>
+            
+        <Dropdown>
+          <Dropdown.Toggle
+            variant="primary"
+            className="togglebutton"
+            style={{ borderRadius: "0" }}
+          >
+            {modulAnzeige}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+              {/* {moduleA.map(m =>(
                 <Dropdown.Item
-                  key={subOption}
-                  className="togglebutton"
-                  onClick={() => handleSubOptionChange(subOption)}
-                >
-                  {subOption}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
-        )}
+                className="togglebutton"
+                key={m.name}
+                onClick={() => auswahlModul(m)}
+              >
+                {m.name}
+              </Dropdown.Item>
+              ))} */}
+          </Dropdown.Menu>
+        </Dropdown>
+
       </div>
     </div>
   );
