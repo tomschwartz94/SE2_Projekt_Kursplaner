@@ -4,16 +4,9 @@ import Footer from "./components/bars/footer";
 import SelectedModuleDisplayer from "./components/selectedModuleDisplayer/selectedModuleDisplayer";
 import ConflictsDisplayer from "./components/conflictsDisplayer/conflictsDisplayer";
 import IcsExporter from "./components/icsExporter/icsExporter";
-import GeneralDropdown from "./components/dropdownns/bachelorDropdown";
-import Semester from "./components/dropdownns/semester";
 import Module from "./components/dropdownns/Modules";
 import SelectedModuleDisplayers from "./components/selectedModuleDisplayer/selectedModuledisplayers";
-import Bachelor from "./components/dropdownns/bachelorDropdown";
 import NestedSelect from "./components/dropdownns/Nestedselect";
-import DropdownForm from "./components/dropdownns/ParentComponent";
-import ParentComponent from "./components/dropdownns/ParentComponent";
-import ComponentA from "./components/dropdownns/ComponentA";
-import ComponentB from "./components/dropdownns/ComponentB";
 import { SelectedValuesProvider } from "./components/dropdownns/contexts/SelectedValuesContext";
 import Modules from "./components/dropdownns/Modules";
 import Mycontext, {
