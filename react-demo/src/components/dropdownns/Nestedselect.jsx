@@ -9,7 +9,6 @@ const semester = [1, 2, 3, 4, 5, 6];
 var semesterA;
 var moduleA;
 var studiengangID;
-var module = [];
 var moduleAusgewaehlt = [];
 
 const NestedSelect = () => {
@@ -79,9 +78,9 @@ const NestedSelect = () => {
 
   const auswahlModul = (subsubOption) => {
     setModulAnzeige(subsubOption.name);
-    if(!moduleAusgewaehlt.some(ele => ele.id == subsubOption.id)){
+    if(!window.$moduleAuswahlList.some(ele => ele.id == subsubOption.id)){
       setSelectedOptions(selectedOptions => [...selectedOptions, subsubOption]);
-      moduleAusgewaehlt.push(subsubOption);
+      window.$moduleAuswahlList.push(subsubOption)
     };
   };
   

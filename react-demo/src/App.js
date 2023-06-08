@@ -16,6 +16,8 @@ import "./components/selectedModuleDisplayer/selectedModuleDipslayer.css";
 import "../src/components/dropdownns/css/displayfield.css";
 import "../src/components/dropdownns/css/button.css";
 
+window.$moduleAuswahlList = [];
+
 function App() {
   return (
     <React.Fragment>
