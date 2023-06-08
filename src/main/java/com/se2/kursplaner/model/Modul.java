@@ -34,7 +34,6 @@ public class Modul {
     public Modul(String name, String kuerzel, Studiengang studiengang, int semester){
         this.name = name;
         this.kuerzel = kuerzel;
-        this.semester = semester;
         this.studiengang = studiengang;
         this.semester = semester;
     }
