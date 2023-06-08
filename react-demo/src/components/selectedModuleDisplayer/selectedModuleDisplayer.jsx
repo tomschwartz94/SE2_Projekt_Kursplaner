@@ -5,6 +5,7 @@ const SelectedModuleDisplayer = ({ option }) => {
 
   const handleClick = () => {
     setComponentVisible(false);
+    
   };
 
   if (!isComponentVisible) {

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Dropdown } from "react-bootstrap";
+import SelectedOptionscontext from "./contexts/displayfieldContext";
 import "../dropdownns/css/nestedselect.css";
 import "../dropdownns/css/button.css";
 
@@ -9,8 +10,13 @@ var semesterA;
 var moduleA;
 var studiengangID;
 var module = [];
+var moduleAusgewaehlt = [];
 
 const NestedSelect = () => {
+
+  const { selectedOptions, setSelectedOptions } = useContext(
+    SelectedOptionscontext
+  );
 
   const [studiengaenge, setStudiengaenge] = useState([]);
 
@@ -73,6 +79,10 @@ const NestedSelect = () => {
 
   const auswahlModul = (subsubOption) => {
     setModulAnzeige(subsubOption.name);
+    if(!moduleAusgewaehlt.some(ele => ele.id == subsubOption.id)){
+      setSelectedOptions(selectedOptions => [...selectedOptions, subsubOption]);
+      moduleAusgewaehlt.push(subsubOption);
+    };
   };
   
   return (
@@ -124,9 +134,10 @@ const NestedSelect = () => {
               {moduleA}
           </Dropdown.Menu>
         </Dropdown>
-
       </div>
     </div>
+
+    
   );
 };
 
