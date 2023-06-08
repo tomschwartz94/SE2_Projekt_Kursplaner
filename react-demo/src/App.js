@@ -40,7 +40,7 @@ function App() {
           <div>
             <div>
               <ConflictsDisplayer />
-              <IcsExporter />
+              {/* <IcsExporter /> */}
             </div>
           </div>
           {/* <ConflictsDisplayerBoard /> */}

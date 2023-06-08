@@ -8,8 +8,8 @@ import "../dropdownns/css/button.css";
 const semester = [1, 2, 3, 4, 5, 6];
 var semesterA;
 var moduleA;
+var module = [];
 var studiengangID;
-var moduleAusgewaehlt = [];
 
 const NestedSelect = () => {
 
