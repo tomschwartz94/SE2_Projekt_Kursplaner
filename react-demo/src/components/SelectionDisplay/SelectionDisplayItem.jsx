@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./SelectionDisplayItem.css";
+
 
 const SelectedModuleDisplayer = ({ option }) => {
   const [isComponentVisible, setComponentVisible] = useState(true);
@@ -6,7 +8,7 @@ const SelectedModuleDisplayer = ({ option }) => {
   const handleClick = (option) => {
     setComponentVisible(false);
     var module = Array.from(window.$moduleAuswahlList);
-    module = module.filter((ele) => ele.id != option);
+    module = module.filter((ele) => ele.id !== option);
     window.$moduleAuswahlList = module;
   };
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../dropdownns/css/button.css";
+import "./ConflictCheckButton.css";
+
 
 var konfliktData;
 

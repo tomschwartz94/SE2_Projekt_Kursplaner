@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import SelectedOptionscontext from "../dropdownns/contexts/displayfieldContext";
-import SelectedModuleDisplayer from "./selectedModuleDisplayer";
+import SelectedOptionscontext from "../Contexts/SelectionDisplayContext";
+import SelectedModuleDisplayer from "./SelectionDisplayItem";
 
-const SelectedModuleDisplayers = () => {
+const SelectionDisplay = () => {
   const { selectedOptions } = useContext(SelectedOptionscontext);
 
   return (
@@ -23,4 +23,4 @@ const SelectedModuleDisplayers = () => {
   );
 };
 
-export default SelectedModuleDisplayers;
+export default SelectionDisplay;

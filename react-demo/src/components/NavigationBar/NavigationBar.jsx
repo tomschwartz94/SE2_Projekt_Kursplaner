@@ -1,5 +1,6 @@
 //import  HAW-LOGO
 import React, { Component } from "react";
+import "./NavigationBar.css";
 
 class Navbar extends Component {
   render() {

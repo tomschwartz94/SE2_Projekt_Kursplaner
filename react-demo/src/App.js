@@ -1,20 +1,12 @@
-import React, { Component } from "react";
-import Navbar from "./components/bars/navbar";
-import Footer from "./components/bars/footer";
-import ConflictsDisplayer from "./components/conflictsDisplayer/conflictsDisplayer";
-import IcsExporter from "./components/icsExporter/icsExporter";
-import SelectedModuleDisplayers from "./components/selectedModuleDisplayer/selectedModuledisplayers";
-import NestedSelect from "./components/dropdownns/Nestedselect";
-import Mycontext, {
-  SelectedOptionsProvider,
-} from "./components/dropdownns/contexts/displayfieldContext";
-import ConflictsDisplayerBoard from "./components/conflictsDisplayer/ConflictsDisplayerBoard";
+import React from "react";
+import Navbar from "./components/NavigationBar/NavigationBar";
+import Footer from "./components/Footer/Footer";
+import ConflictsDisplayer from "./components/ConflictCheckButton/ConflictCheckButton";
+import SelectionDisplay from "./components/SelectionDisplay/SelectionDisplay";
+import SelectionMenu from "./components/SelectionMenu/SelectionMenu";
+import { SelectedOptionsProvider } from "./components/Contexts/SelectionDisplayContext";
 import "./index.css";
 import "./App.css";
-import "./components/dropdownns/css/dropdownCombined.css";
-import "./components/selectedModuleDisplayer/selectedModuleDipslayer.css";
-import "../src/components/dropdownns/css/displayfield.css";
-import "../src/components/dropdownns/css/button.css";
 
 window.$moduleAuswahlList = [];
 
@@ -27,23 +19,17 @@ function App() {
           <div className="combined-dropdown">
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex" }}>
-                <NestedSelect />
+                <SelectionMenu />
               </div>
               <div>
-                <SelectedModuleDisplayers />
+                <SelectionDisplay />
               </div>
             </div>
           </div>
         </SelectedOptionsProvider>
 
         <div className="combined-dropdown">
-          <div>
-            <div>
-              <ConflictsDisplayer />
-              {/* <IcsExporter /> */}
-            </div>
-          </div>
-          {/* <ConflictsDisplayerBoard /> */}
+          <ConflictsDisplayer />
         </div>
       </main>
 
