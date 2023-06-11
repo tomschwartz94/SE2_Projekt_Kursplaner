@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
-import ConflictsDisplayer from "./components/ConflictCheckButton/ConflictCheckButton";
+import ConflictCheckButton from "./components/ConflictCheckButton/ConflictCheckButton";
 import SelectionDisplay from "./components/SelectionDisplay/SelectionDisplay";
 import SelectionMenu from "./components/SelectionMenu/SelectionMenu";
 import { SelectedOptionsProvider } from "./components/Contexts/SelectionDisplayContext";
@@ -29,7 +29,7 @@ function App() {
         </SelectedOptionsProvider>
 
         <div className="combined-dropdown">
-          <ConflictsDisplayer />
+          <ConflictCheckButton />
         </div>
       </main>
 

@@ -17,7 +17,7 @@ const SelectionMenu = () => {
   const [semesterAnzeige, setSemesterAnzeige] = useState('Semester');
   const [modulAnzeige, setModulAnzeige] = useState('Modul');
 
-  const fetchData = async () => {
+  const fetchModule = async () => {
     try {
       await fetch('api/modul/' + studiengangID).then(response => response.json()).then(data => {
         module = Array.from(data);
@@ -27,6 +27,7 @@ const SelectionMenu = () => {
     }
   };
 
+  //Studiengaenge laden
   useEffect(() => {
     fetch('api/studiengang').then(response => response.json()).then(data => {
       setStudiengaenge(data);
@@ -36,7 +37,7 @@ const SelectionMenu = () => {
   const auswahlStudiengang = option => {
     setStudiengangAnzeige(option.name);
     studiengangID = option.id;
-    fetchData();
+    fetchModule();
     semesterA = [];
     semester.forEach(sem => {
       semesterA.push(

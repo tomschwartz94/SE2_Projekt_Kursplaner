@@ -4,7 +4,7 @@ import "./ConflictCheckButton.css";
 
 var konfliktData;
 
-const ueberpruefenCall = async () => {
+const fetchUeberpruefen = async (ob) => {
     
   const requestOptions = {
     method: 'PUT',
@@ -22,17 +22,29 @@ const ueberpruefenCall = async () => {
     console.error(error);
   };
   console.log(konfliktData);
+  
 };
 
-class ConflictsDisplayer extends Component {
-  state = {};
+class ConflictCheckButton extends Component {
+  constructor() {
+    super();
+    this.state = { 
+      style: "btn btn-outline-dark"
+    };
+    this.onClick = this.onClick.bind(this);
+  }
 
-  
+  onClick(event) {
+    fetchUeberpruefen();
+    this.setState({ 
+      style: "btn btn-outline-danger"
+    });
+ }
 
   render() {
     return (
       <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-danger" type="button" className="normale-button" onClick={() => ueberpruefenCall()}>
+        <button class={this.state.style} type="button" onClick={this.onClick}>
           Überprüfen
         </button>
       </div>
@@ -40,4 +52,4 @@ class ConflictsDisplayer extends Component {
   }
 }
 
-export default ConflictsDisplayer;
+export default ConflictCheckButton;
