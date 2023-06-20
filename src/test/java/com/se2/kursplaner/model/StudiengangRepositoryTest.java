@@ -23,9 +23,9 @@ public class StudiengangRepositoryTest {
 
     @BeforeEach
     public void setUp(){
-        studiengang1 = new Studiengang("Studiengang_1", "st1");
+        studiengang1 = new Studiengang("Studiengang_1", "st1", 6);
         studiengangRepository.save(studiengang1);
-        studiengang2 = new Studiengang("Studiengang_2", "st2");
+        studiengang2 = new Studiengang("Studiengang_2", "st2", 6);
         studiengangRepository.save(studiengang2);
     }
 

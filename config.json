@@ -1,8 +1,9 @@
 {
     "data":[
         {
-            "StudingangName": "Angewante Informatik",
+            "StudingangName": "Angewandte Informatik",
             "StudiengangKuerzel": "AI",
+            "StudiengangSemesteranzahl": 6,
             "module": [
                 {
                     "modulName":"Intelligente Systeme",
@@ -12,7 +13,7 @@
                     "load": "once"
                 },
                 {
-                    "modulName":"Software Engineerin",
+                    "modulName":"Software Engineering",
                     "modulKuerzel":"SE2",
                     "semester": 4,
                     "terminFile": "./data/kalender_datein/BAI4-SE2.ics",

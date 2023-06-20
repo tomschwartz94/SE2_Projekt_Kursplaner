@@ -31,7 +31,7 @@ public class StudiengangControllerTest {
 
     @BeforeEach
     void setUp(){
-        studiengang = new Studiengang("Studiengang1", "st1");
+        studiengang = new Studiengang("Studiengang1", "st1",6);
         studiengangRepository.save(studiengang);
 
         RestAssured.port = port;

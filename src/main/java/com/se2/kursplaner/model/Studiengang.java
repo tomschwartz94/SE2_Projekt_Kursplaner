@@ -23,14 +23,18 @@ public class Studiengang {
     private String name;
 
     @NotNull
+    private int semesterAnzahl;
+
+    @NotNull
     @Size(min = 1, max = 5)
     private String kuerzel;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Modul> module;
 
-    public Studiengang(String name, String kuerzel){
+    public Studiengang(String name, String kuerzel, int semesterAnzahl){
         this.name = name;
         this.kuerzel = kuerzel;
+        this.semesterAnzahl = semesterAnzahl;
     }
 }

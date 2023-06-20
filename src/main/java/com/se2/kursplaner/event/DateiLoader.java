@@ -60,10 +60,11 @@ public class DateiLoader implements CommandLineRunner{
                 String studiengangName = (String) studiengang.get("StudingangName");
                 Studiengang studiengangData = studiengangRepository.findByName(studiengangName);
                 String studiengangKuerzel = (String) studiengang.get("StudiengangKuerzel");
+                int studiengangSemesteranzahl = (int) studiengang.get("StudiengangSemesteranzahl");
 
                 //Studingang erstellen wenn nicht vorhanden
                 if(studiengangData == null){
-                    studiengangData = new Studiengang(studiengangName, studiengangKuerzel);
+                    studiengangData = new Studiengang(studiengangName, studiengangKuerzel, studiengangSemesteranzahl);
                     studiengangRepository.save(studiengangData);
                 }
 
