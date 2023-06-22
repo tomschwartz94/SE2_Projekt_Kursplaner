@@ -6,31 +6,17 @@
             "StudiengangSemesteranzahl": 6,
             "module": [
                 {
-                    "modulName":"Intelligente Systeme",
-                    "modulKuerzel":"IS",
-                    "semester": 4,
-                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-IS.ics",
-                    "load": "once"
-                },
-                {
-                    "modulName":"Software Engineering",
-                    "modulKuerzel":"SE2",
-                    "semester": 4,
-                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-SE2.ics",
-                    "load": "once"
-                },
-                {
-                    "modulName":"Rechnernetze",
-                    "modulKuerzel":"RN",
-                    "semester": 4,
-                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-RN.ics",
-                    "load": "once"
-                },
-                {
                     "modulName":"Betriebswirtschaftslehre",
                     "modulKuerzel":"BW1",
                     "semester": 1,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI1-BW1-BW1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"BW1 Übung",
+                    "modulKuerzel":"BWÜ1",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-BW1-BWU1.ics",
                     "load": "once"
                 },
                 {
@@ -41,10 +27,38 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"DM Übung",
+                    "modulKuerzel":"DMÜ",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-DMU.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Grundlagen der Informatik",
                     "modulKuerzel":"GI",
                     "semester": 1,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI1-GI.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GI Übung 01",
+                    "modulKuerzel":"GIÜ/01",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-GIU-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GI Übung 02",
+                    "modulKuerzel":"GIÜ/02",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-GIU-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GI Übung 03",
+                    "modulKuerzel":"GIÜ/03",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-GIU-03.ics",
                     "load": "once"
                 },
                 {
@@ -55,10 +69,59 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"PT Praktikum 01",
+                    "modulKuerzel":"PTP/01",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PT Praktikum 02",
+                    "modulKuerzel":"PTP/02",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PT Praktikum 03",
+                    "modulKuerzel":"PTP/03",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PT Praktikum 04",
+                    "modulKuerzel":"PTP/04",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-04.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PT Praktikum 05",
+                    "modulKuerzel":"PTP/05",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-05.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PT Praktikum 06",
+                    "modulKuerzel":"PTP/06",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI1-PTP-06.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Automatentheorie und Formale Sprachen",
                     "modulKuerzel":"AF",
                     "semester": 2,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI2-AF-AF.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AF Übung",
+                    "modulKuerzel":"AFÜ",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-AF-AFU.ics",
                     "load": "once"
                 },
                 {
@@ -69,10 +132,59 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"DB Pratikum 01",
+                    "modulKuerzel":"DBP/01",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-DBP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DB Pratikum 02",
+                    "modulKuerzel":"DBP/02",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-DBP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DB Pratikum 03",
+                    "modulKuerzel":"DBP/03",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-DBP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DB Pratikum 04",
+                    "modulKuerzel":"DBP/04",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-DBP-04.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Logik und Berechenbarkeiten",
                     "modulKuerzel":"LB",
                     "semester": 2,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI2-LB.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"LB Praktikum 01",
+                    "modulKuerzel":"LBP/01",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-LBP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"LB Praktikum 02",
+                    "modulKuerzel":"LBP/02",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-LBP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"LB Praktikum 03",
+                    "modulKuerzel":"LBP/03",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-LBP-03.ics",
                     "load": "once"
                 },
                 {
@@ -83,10 +195,73 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"PM2 Praktikum 01",
+                    "modulKuerzel":"PMP2/01",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-PMP2-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PM2 Praktikum 02",
+                    "modulKuerzel":"PMP2/02",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-PMP2-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PM2 Praktikum 03",
+                    "modulKuerzel":"PMP2/03",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-PMP2-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"PM2 Praktikum 04",
+                    "modulKuerzel":"PMP2/04",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-PMP2-04.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Rechnerstrukturen und maschinennahe Programmierung",
                     "modulKuerzel":"RMP",
                     "semester": 2,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI2-RMP.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RMP Praktikum 01",
+                    "modulKuerzel":"RMPP/01",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-RMPP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RMP Praktikum 02",
+                    "modulKuerzel":"RMPP/02",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-RMPP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RMP Praktikum 03",
+                    "modulKuerzel":"RMPP/03",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-RMPP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RMP Praktikum 04",
+                    "modulKuerzel":"RMPP/04",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-RMPP-04.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RMP Praktikum 05",
+                    "modulKuerzel":"RMPP/05",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI2-RMPP-05.ics",
                     "load": "once"
                 },
                 {
@@ -97,10 +272,52 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"AD Praktikum 01",
+                    "modulKuerzel":"ADP/01",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-ADP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AD Praktikum 02",
+                    "modulKuerzel":"ADP/02",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-ADP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AD Praktikum 03",
+                    "modulKuerzel":"ADP/03",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-ADP-03.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Betriebssysteme",
                     "modulKuerzel":"BS",
                     "semester": 3,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI3-BS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"BS Praktikum 01",
+                    "modulKuerzel":"BSP/01",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-BSP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"BS Praktikum 02",
+                    "modulKuerzel":"BSP/02",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-BSP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"BS Praktikum 03",
+                    "modulKuerzel":"BSP/03",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-BSP-03.ics",
                     "load": "once"
                 },
                 {
@@ -111,10 +328,59 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"DS Praktikum 01",
+                    "modulKuerzel":"DSP/01",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-DSP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DS Praktikum 02",
+                    "modulKuerzel":"DSP/02",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-DSP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DS Praktikum 03",
+                    "modulKuerzel":"DSP/03",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-DSP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"DS Praktikum 04",
+                    "modulKuerzel":"DSP/04",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-DSP-04.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Graphentheoretische Konzepte und Algorithmen",
                     "modulKuerzel":"GKA",
                     "semester": 3,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI3-GKA.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GKA Praktikum 01",
+                    "modulKuerzel":"GKAP/01",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-GKAP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GKA Praktikum 02",
+                    "modulKuerzel":"GKAP/02",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-GKAP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GKA Praktikum 03",
+                    "modulKuerzel":"GKAP/03",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-GKAP-03.ics",
                     "load": "once"
                 },
                 {
@@ -125,10 +391,136 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"SE1 Praktikum 01",
+                    "modulKuerzel":"SEP1/01",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-SEP1-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"SE1 Praktikum 02",
+                    "modulKuerzel":"SEP1/02",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-SEP1-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"SE1 Praktikum 03",
+                    "modulKuerzel":"SEP1/03",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI3-SEP1-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Intelligente Systeme",
+                    "modulKuerzel":"IS",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-IS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"IS Praktikum 01",
+                    "modulKuerzel":"ISP/01",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-ISP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"IS Praktikum 02",
+                    "modulKuerzel":"ISP/02",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-ISP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"IS Praktikum 03",
+                    "modulKuerzel":"ISP/03",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-ISP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Software Engineering",
+                    "modulKuerzel":"SE2",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-SE2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"SE2 Praktikum 01",
+                    "modulKuerzel":"SEP2/01",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-SEP2-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"SE2 Praktikum 02",
+                    "modulKuerzel":"SEP2/02",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-SEP2-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"SE2 Praktikum 03",
+                    "modulKuerzel":"SEP2/03",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-SEP2-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Rechnernetze",
+                    "modulKuerzel":"RN",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/VL/BAI4-RN.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RN Praktikum 01",
+                    "modulKuerzel":"RNP/01",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-RNP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RN Praktikum 02",
+                    "modulKuerzel":"RNP/02",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-RNP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"RN Praktikum 03",
+                    "modulKuerzel":"RNP/03",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI4-RNP-03.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"Architektur von Informationssysteme",
                     "modulKuerzel":"AI",
                     "semester": 5,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI5-AI.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AI Praktikum 01",
+                    "modulKuerzel":"AIP/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-AIP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AI Praktikum 02",
+                    "modulKuerzel":"AIP/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-AIP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"AI Praktikum 03",
+                    "modulKuerzel":"AIP/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-AIP-03.ics",
                     "load": "once"
                 },
                 {
@@ -139,10 +531,122 @@
                     "load": "once"
                 },
                 {
+                    "modulName":"VS Praktikum 01",
+                    "modulKuerzel":"VSP/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-VSP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"VS Praktikum 02",
+                    "modulKuerzel":"VSP/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-VSP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"VS Praktikum 03",
+                    "modulKuerzel":"VSP/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI5-VSP-03.ics",
+                    "load": "once"
+                },
+                {
                     "modulName":"IT-Sicherheit",
                     "modulKuerzel":"ITS",
                     "semester": 6,
                     "terminFile": "./data/kalender_datein/AI/VL/BAI6-ITS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"ITS Praktikum 01",
+                    "modulKuerzel":"ITSP/01",
+                    "semester": 6,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI6-ITSP-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"ITS Praktikum 02",
+                    "modulKuerzel":"ITSP/02",
+                    "semester": 6,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI6-ITSP-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"ITS Praktikum 03",
+                    "modulKuerzel":"ITSP/03",
+                    "semester": 6,
+                    "terminFile": "./data/kalender_datein/AI/LAB/BAI6-ITSP-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 1",
+                    "modulKuerzel":"PRO/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 2",
+                    "modulKuerzel":"PRO/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 3",
+                    "modulKuerzel":"PRO/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 4",
+                    "modulKuerzel":"PRO/04",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_4.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 5",
+                    "modulKuerzel":"PRO/05",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_5.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Projekt 6",
+                    "modulKuerzel":"PRO/06",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/PRO/INF-PRO_6.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Seminar A",
+                    "modulKuerzel":"SEM/A",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/SEM/B-Seminar_A.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Seminar B",
+                    "modulKuerzel":"SEM/B",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/SEM/B-Seminar_B.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Seminar C",
+                    "modulKuerzel":"SEM/C",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/SEM/B-Seminar_C.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Seminar D",
+                    "modulKuerzel":"SEM/D",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/SEM/B-Seminar_D.ics",
                     "load": "once"
                 }
             ]
