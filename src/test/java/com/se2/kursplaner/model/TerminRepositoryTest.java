@@ -35,7 +35,7 @@ public class TerminRepositoryTest {
 
     @BeforeEach
     public void setUp(){
-        studiengang = new Studiengang("Studiengang", "st");
+        studiengang = new Studiengang("Studiengang", "st", 6);
         studiengangRepository.save(studiengang);
 
         modul1 = new Modul("Modul1", "m1", studiengang, 3);

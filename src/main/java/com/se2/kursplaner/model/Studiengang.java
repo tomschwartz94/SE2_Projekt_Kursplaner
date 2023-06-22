@@ -8,8 +8,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -23,18 +21,18 @@ public class Studiengang {
     private String name;
 
     @NotNull
-    private int semesterAnzahl;
+    private int semester_anzahl;
 
     @NotNull
     @Size(min = 1, max = 5)
     private String kuerzel;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Modul> module;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    private List<Modul> module;
 
-    public Studiengang(String name, String kuerzel, int semesterAnzahl){
+    public Studiengang(String name, String kuerzel, int semester_anzahl){
         this.name = name;
         this.kuerzel = kuerzel;
-        this.semesterAnzahl = semesterAnzahl;
+        this.semester_anzahl = semester_anzahl;
     }
 }
