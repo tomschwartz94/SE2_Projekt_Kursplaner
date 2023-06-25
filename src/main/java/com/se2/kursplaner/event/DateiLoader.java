@@ -60,7 +60,7 @@ public class DateiLoader implements CommandLineRunner{
                 String studiengangName = (String) studiengang.get("StudingangName");
                 Studiengang studiengangData = studiengangRepository.findByName(studiengangName);
                 String studiengangKuerzel = (String) studiengang.get("StudiengangKuerzel");
-                Integer studiengangSemesteranzahl = ((Long) studiengang.get("StudiengangSemesteranzahl")).intValue();
+                int studiengangSemesteranzahl = ((Long) studiengang.get("StudiengangSemesteranzahl")).intValue();
 
                 //Studingang erstellen wenn nicht vorhanden
                 if(studiengangData == null){
@@ -82,7 +82,7 @@ public class DateiLoader implements CommandLineRunner{
                     int semester = number.intValue();
                     String modulKuerzel = (String) modul.get("modulKuerzel");
 
-                    Modul modulData = modulRepository.findByName(modulName);
+                    Modul modulData = modulRepository.findByNameAndStudiengang(modulName, studiengangData);
 
                     if(load.equals("once") && modulData == null){
 

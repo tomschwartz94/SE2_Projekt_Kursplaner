@@ -648,6 +648,454 @@
                     "semester": 5,
                     "terminFile": "./data/kalender_datein/AI/SEM/B-Seminar_D.ics",
                     "load": "once"
+                },
+                {
+                    "modulName":"GW BRSK BE",
+                    "modulKuerzel":"GW/BE",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_BRSK_BE.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW BRSK TE",
+                    "modulKuerzel":"GW/TE",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_BRSK_TE.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW DOLE",
+                    "modulKuerzel":"GW/DOLE",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_DOLE.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW DRHM",
+                    "modulKuerzel":"GW/DRHM",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_DRHM.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW HLLS",
+                    "modulKuerzel":"GW/HLLS",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_HLLS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW KHL",
+                    "modulKuerzel":"GW/KHL",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_KHL.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW LFRS",
+                    "modulKuerzel":"GW/LFRS",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_LFRS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW MCCL 1",
+                    "modulKuerzel":"GW/MCCL/1",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_MCCL_1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW MCCL 2",
+                    "modulKuerzel":"GW/MCCL/2",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_MCCL_2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW MCCL3",
+                    "modulKuerzel":"GW/MCCL/3",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_MCCL_3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW PDB",
+                    "modulKuerzel":"GW/PDB",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_PDB.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW SMHL",
+                    "modulKuerzel":"GW/SMHL",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_SMHL.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW STAN",
+                    "modulKuerzel":"GW/STAN",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_STAN.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"GW WLTP",
+                    "modulKuerzel":"GW/WLTP",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/AI/GW/GW_WLTP.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A3",
+                    "modulKuerzel":"WP/A3",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-A3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A3 Praktikum 01",
+                    "modulKuerzel":"WPP/A3/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A3-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A3 Praktikum 02",
+                    "modulKuerzel":"WPP/A3/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A3-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A3 Praktikum 03",
+                    "modulKuerzel":"WPP/A3/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A3-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A4",
+                    "modulKuerzel":"WP/A4",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-A4.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A4 Praktikum 01",
+                    "modulKuerzel":"WPP/A4/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A4-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A4 Praktikum 02",
+                    "modulKuerzel":"WPP/A4/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A4-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A4 Praktikum 03",
+                    "modulKuerzel":"WPP/A4/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-A4-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B1",
+                    "modulKuerzel":"WP/B1",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-B1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B1 Praktikum 01",
+                    "modulKuerzel":"WPP/B1/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-B1-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B2",
+                    "modulKuerzel":"WP/B2",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-B2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B2 Praktikum 01",
+                    "modulKuerzel":"WPP/B2/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-B2-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B2 Praktikum 02",
+                    "modulKuerzel":"WPP/B2/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-B2-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B2 Praktikum 03",
+                    "modulKuerzel":"WPP/B2/03",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-B2-03.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B3",
+                    "modulKuerzel":"WP/B3",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-B3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP B3 Praktikum 01",
+                    "modulKuerzel":"WPP/B3/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-B3-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C1",
+                    "modulKuerzel":"WP/C1",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-C1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C1 Praktikum 01",
+                    "modulKuerzel":"WPP/C1/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-C1-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C3",
+                    "modulKuerzel":"WP/C3",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-C3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C3 Praktikum 01",
+                    "modulKuerzel":"WPP/C3/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-C3-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C3 Praktikum 02",
+                    "modulKuerzel":"WPP/C3/02",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-C3-02.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C4",
+                    "modulKuerzel":"WP/C4",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-C4.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C4 Praktikum 01",
+                    "modulKuerzel":"WPP/C4/01",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WPP-C4-01.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A1 + Praktikum",
+                    "modulKuerzel":"WP/WPP/A1",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-WPP-A1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP A2 + Praktikum",
+                    "modulKuerzel":"WP/WPP/A2",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-WPP-A2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP C3 + Praktikum",
+                    "modulKuerzel":"WP/WPP/C3",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-WPP-C3.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"WP W1 + Praktikum",
+                    "modulKuerzel":"WP/WPP/W1",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/AI/WP/INF-WP-WPP-W1.ics",
+                    "load": "once"
+                }
+            ]
+        },
+        {
+            "StudingangName": "Informatik Technischer Systeme",
+            "StudiengangKuerzel": "ITS",
+            "StudiengangSemesteranzahl": 6,
+            "module": [
+                {
+                    "modulName":"Diskrete Mathematik",
+                    "modulKuerzel":"DM",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS1-DM.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Grundlagen der Technischen Informatik",
+                    "modulKuerzel":"GT",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS1-GT.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Mess- und Sensortechnik",
+                    "modulKuerzel":"MS",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS1-MS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Programmiermethodik 1 und Programmiertechnik",
+                    "modulKuerzel":"PM1 PT",
+                    "semester": 1,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS1-PM1-PT.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Analysis und linear Algebra + Übung",
+                    "modulKuerzel":"AA/AAÜ",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS2-AA-AAUe.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Automatentheorie und Formale Sprachen + Übung",
+                    "modulKuerzel":"AF/AFÜ",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS2-AF-AFUe.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Datenbanken",
+                    "modulKuerzel":"DB",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS2-DB.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Grundlagen der der systemnahen Programmierung",
+                    "modulKuerzel":"GS",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS2-GS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Programmiermethodik 2",
+                    "modulKuerzel":"PM2",
+                    "semester": 2,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS2-PM2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Algorithmen und Datenstrukturen",
+                    "modulKuerzel":"AD",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS3-AD.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Betriebssysteme",
+                    "modulKuerzel":"BS",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS3-BS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Intelligente Sensorsysteme",
+                    "modulKuerzel":"ISS",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS3-ISS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Software Engineering I",
+                    "modulKuerzel":"SE1",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS3-SE1.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Signalverarbeitung und Stochastik",
+                    "modulKuerzel":"SS",
+                    "semester": 3,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS3-SS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Rechnernetze",
+                    "modulKuerzel":"RN",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS4-RN.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Software Engineering",
+                    "modulKuerzel":"SE2",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS4-SE2.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Mustererkennung und Machine Learning",
+                    "modulKuerzel":"MM",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS4-MM.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Embedded Programming",
+                    "modulKuerzel":"EP",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS4-EP.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"System- und Echtzeitprogrammierung",
+                    "modulKuerzel":"SY",
+                    "semester": 4,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS4-SY.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Betriebswirtschaft",
+                    "modulKuerzel":"BW",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS5-BW.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Verteilte Systeme",
+                    "modulKuerzel":"VS",
+                    "semester": 5,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS5-VS.ics",
+                    "load": "once"
+                },
+                {
+                    "modulName":"Cyber-physische Systeme",
+                    "modulKuerzel":"CPS",
+                    "semester": 6,
+                    "terminFile": "./data/kalender_datein/ITS/VL/BITS6-CPS.ics",
+                    "load": "once"
                 }
             ]
         }

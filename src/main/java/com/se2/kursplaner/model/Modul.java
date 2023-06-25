@@ -36,7 +36,6 @@ public class Modul {
         this.kuerzel = kuerzel;
         this.semester = semester;
         this.studiengang = studiengang;
-        this.semester = semester;
     }
 
 }
