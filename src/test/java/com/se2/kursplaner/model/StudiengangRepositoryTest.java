@@ -49,6 +49,6 @@ public class StudiengangRepositoryTest {
 
     @Test
     public void findAll_Success(){
-        assertThat(studiengangRepository.findAll()).hasSize(3);
+        assertThat(studiengangRepository.findAll()).hasSize(4);
     }
 }
