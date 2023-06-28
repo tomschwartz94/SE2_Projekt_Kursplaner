@@ -15,7 +15,7 @@ const SelectionMenu = () => {
   const [studiengaenge, setStudiengaenge] = useState([]);
   const [studiengangAnzeige, setStudiengangAnzeige] = useState('Studiengang');
   const [semesterAnzeige, setSemesterAnzeige] = useState('Semester');
-  const [modulAnzeige, setModulAnzeige] = useState('Modul');
+  const [modulAnzeige, setModulAnzeige] = useState('Veranstaltung');
 
   const fetchModule = async () => {
     try {

@@ -28,11 +28,11 @@ public class ModulRepositoryTest {
 
     @BeforeEach
     public void setUp(){
-        studiengang1 = new Studiengang("Studiengang1", "st1");
+        studiengang1 = new Studiengang("Studiengang1", "st1", 6);
         studiengangRepository.save(studiengang1);
-        studiengang2 = new Studiengang("Studiengang2", "st2");
+        studiengang2 = new Studiengang("Studiengang2", "st2", 6);
         studiengangRepository.save(studiengang2);
-        studiengang3 = new Studiengang("Studiengang3", "st3");
+        studiengang3 = new Studiengang("Studiengang3", "st3", 6);
         studiengangRepository.save(studiengang3);
 
         modul1 = new Modul("Modul1", "m1",  studiengang1, 2);

@@ -44,9 +44,9 @@ public class ModulControllerTest {
 
     @BeforeEach
     void setUp(){
-        studiengang = new Studiengang("Studiengang1", "st1");
+        studiengang = new Studiengang("Studiengang1", "st1", 6);
         studiengangRepository.save(studiengang);
-        studiengang1 = new Studiengang("Studiengang1.1", "st1.1");
+        studiengang1 = new Studiengang("Studiengang1.1", "st1.1", 6);
         studiengangRepository.save(studiengang1);
 
         modul1 = new Modul("Modul1", "m1", studiengang, 1);
