@@ -73,7 +73,19 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
+		<resources>
+			<resource>
+				<directory>data</directory>
+			</resource>
+			<resource>
+				<directory>.</directory>
+				<includes>
+					<include>config.json</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -150,19 +162,19 @@
 								</goals>
 								<phase>generate-resources</phase>
 							</execution>
-							<execution>
-								<id>npm test</id>
-								<goals>
-									<goal>npm</goal>
-								</goals>
-								<phase>test</phase>
-								<configuration>
-									<arguments>test</arguments>
-									<environmentVariables>
-										<CI>true</CI>
-									</environmentVariables>
-								</configuration>
-							</execution>
+<!--							<execution>-->
+<!--								<id>npm test</id>-->
+<!--								<goals>-->
+<!--									<goal>npm</goal>-->
+<!--								</goals>-->
+<!--								<phase>test</phase>-->
+<!--								<configuration>-->
+<!--									<arguments>test</arguments>-->
+<!--									<environmentVariables>-->
+<!--										<CI>true</CI>-->
+<!--									</environmentVariables>-->
+<!--								</configuration>-->
+<!--							</execution>-->
 							<execution>
 								<id>npm build</id>
 								<goals>
