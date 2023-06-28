@@ -8,7 +8,7 @@ class Navbar extends Component {
       <nav class="navbar fixed-top bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            HAW KursPlanner
+            HAW Kursplaner
           </a>
         </div>
       </nav>

@@ -18,9 +18,11 @@ function App() {
       <Navbar />
       <main className="container">
           <div className="combined-dropdown">
+
             <div align="left" style={{ display: "flex", flexDirection: "column" }}>
             <ConflictProvider>
               <SelectedOptionsProvider>
+                  <h6>GWs findest Du im 4. Semester und Projekte, Seminare und WPs findest Du im 5. Semester </h6>
                 <div style={{ display: "flex" }}>
                   <SelectionMenu />
                   <ConflictCheckButton />
@@ -34,7 +36,6 @@ function App() {
             </div>
           </div>
       </main>
-      <Footer />
     </React.Fragment>
   );
 }
