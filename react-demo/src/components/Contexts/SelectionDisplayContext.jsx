@@ -6,8 +6,7 @@ export const SelectedOptionsProvider = ({ children }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   return (
-    <SelectedOptionscontext.Provider
-      value = {{ selectedOptions, setSelectedOptions }} >
+    <SelectedOptionscontext.Provider value = {{ selectedOptions, setSelectedOptions }} >
       {children}
     </SelectedOptionscontext.Provider>
   );

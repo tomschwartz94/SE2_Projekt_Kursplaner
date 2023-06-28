@@ -1,24 +1,21 @@
 import React, { useContext } from "react";
 import SelectedOptionscontext from "../Contexts/SelectionDisplayContext";
 import SelectedModuleDisplayer from "./SelectionDisplayItem";
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const SelectionDisplay = () => {
   const { selectedOptions } = useContext(SelectedOptionscontext);
 
   return (
-    <div className="combined-dropdown">
-      <div>
+     <div>
+      <h4>Ausgewählte Kurse:</h4>
         {selectedOptions.length > 0 && (
-          <div>
-            <h4 style={{ fontFamily: "sans-serif" }}>Ausgewählte Kurse:</h4>
-            <ul>
-              {selectedOptions.map(option => (
-                <SelectedModuleDisplayer key={option.id} option={option} />
-              ))}
-            </ul>
-          </div>
+          <ListGroup as="ol" numbered>
+            { selectedOptions.map(option => (
+              <SelectedModuleDisplayer key={option.id} option={option} />
+            )) }
+          </ListGroup>
         )}
-      </div>
     </div>
   );
 };

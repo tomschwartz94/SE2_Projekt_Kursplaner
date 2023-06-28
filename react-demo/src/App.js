@@ -7,6 +7,8 @@ import SelectionMenu from "./components/SelectionMenu/SelectionMenu";
 import { SelectedOptionsProvider } from "./components/Contexts/SelectionDisplayContext";
 import "./index.css";
 import "./App.css";
+import ConflictDisplay from "./components/ConflictDisplay/ConflictDisplay";
+import { ConflictProvider } from "./components/Contexts/ConflictDisplayContext";
 
 window.$moduleAuswahlList = [];
 
@@ -15,24 +17,23 @@ function App() {
     <React.Fragment>
       <Navbar />
       <main className="container">
-        <SelectedOptionsProvider>
           <div className="combined-dropdown">
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ display: "flex" }}>
-                <SelectionMenu />
-              </div>
-              <div>
-                <SelectionDisplay />
-              </div>
+            <div align="left" style={{ display: "flex", flexDirection: "column" }}>
+            <ConflictProvider>
+              <SelectedOptionsProvider>
+                <div style={{ display: "flex" }}>
+                  <SelectionMenu />
+                  <ConflictCheckButton />
+                </div>
+                <div style={{ display: "flex" }}>
+                  <SelectionDisplay />
+                  <ConflictDisplay />
+                </div>
+              </SelectedOptionsProvider>
+              </ConflictProvider>
             </div>
           </div>
-        </SelectedOptionsProvider>
-
-        <div className="combined-dropdown">
-          <ConflictCheckButton />
-        </div>
       </main>
-
       <Footer />
     </React.Fragment>
   );

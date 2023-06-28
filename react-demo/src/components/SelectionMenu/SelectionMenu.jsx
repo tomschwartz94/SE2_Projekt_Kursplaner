@@ -41,7 +41,7 @@ const SelectionMenu = () => {
     semesterA = [];
     semester.forEach(sem => {
       semesterA.push(
-      <Dropdown.Item className="togglebutton" key={sem} onClick={() => auswahlSemester(sem)}>
+      <Dropdown.Item key={sem} onClick={() => auswahlSemester(sem)}>
         {sem}
       </Dropdown.Item>
       );
@@ -54,7 +54,7 @@ const SelectionMenu = () => {
     moduleA = [];
     module.forEach(modul => {
       if (modul.semester === subOption) {
-        moduleA.push(<Dropdown.Item className="togglebutton" key={modul.name} onClick={() => auswahlModul(modul)}>
+        moduleA.push(<Dropdown.Item key={modul.name} onClick={() => auswahlModul(modul)}>
           {modul.name}
         </Dropdown.Item>);
       }
@@ -75,22 +75,18 @@ const SelectionMenu = () => {
   return <div className="nested-select-container">
       <div className="nested-select">
         <Dropdown>
-          <Dropdown.Toggle variant="primary" className="togglebutton" style={{
-          borderRadius: "0"
-        }}>
+          <Dropdown.Toggle variant="primary">
             {studiengangAnzeige}
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            {studiengaenge.map(studiengang => <Dropdown.Item variant="primary" className="togglebutton" key={studiengang.name} onClick={() => auswahlStudiengang(studiengang)}>
+            {studiengaenge.map(studiengang => <Dropdown.Item key={studiengang.name} onClick={() => auswahlStudiengang(studiengang)}>
                 {studiengang.name}
               </Dropdown.Item>)}
           </Dropdown.Menu>
         </Dropdown>
 
         <Dropdown>
-          <Dropdown.Toggle variant="primary" className="togglebutton" style={{
-          borderRadius: "0"
-        }}>
+          <Dropdown.Toggle variant="primary">
             {semesterAnzeige}
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -99,9 +95,7 @@ const SelectionMenu = () => {
         </Dropdown>
             
         <Dropdown>
-          <Dropdown.Toggle className="togglebutton" style={{
-          borderRadius: "0"
-        }}>
+          <Dropdown.Toggle variant="primary">
             {modulAnzeige}
           </Dropdown.Toggle>
           <Dropdown.Menu>

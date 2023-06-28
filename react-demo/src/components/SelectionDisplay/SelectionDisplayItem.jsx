@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SelectionDisplayItem.css";
-
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const SelectedModuleDisplayer = ({ option }) => {
   const [isComponentVisible, setComponentVisible] = useState(true);
@@ -16,14 +16,9 @@ const SelectedModuleDisplayer = ({ option }) => {
     return null; // Return null to remove the component from the DOM
   }
   return (
-    <div className="combined-dropdown">
-      <div className="togglebutton" id="mdiv" onClick={() => handleClick(option.id)}>
-        <div class="mdiv">
-          <div class="md"></div>
-        </div>
-      </div>
-      <div>{option.name}</div>
-    </div>
+    <ListGroup.Item as="li" action onClick={() => handleClick(option.id)}>
+      {option.name}
+    </ListGroup.Item>
   );
 };
 
