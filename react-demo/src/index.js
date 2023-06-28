@@ -3,16 +3,11 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-import Navbar from "./components/bars/navbar";
 //currrently using bootsrap 5.2
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import SelectButton from "./components/button";
-import SelectedModuleDisplayer from "./components/selectedModuleDisplayer/selectedModuleDisplayer";
-import ConflictsDisplayer from "./components/conflictsDisplayer/conflictsDisplayer";
-import IcsExporter from "./components/icsExporter/icsExporter";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

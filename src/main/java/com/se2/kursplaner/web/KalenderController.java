@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+@RequestMapping("/api/kalender")
 @RestController
 public class KalenderController {
 
@@ -19,7 +19,7 @@ public class KalenderController {
     private CollisionService collisionService;
 
     // Endpoint to check for Termin collisions
-    @PutMapping("/kalender/check")
+    @PutMapping("/check")
     public ResponseEntity<TerminVal> checkTermine(@RequestBody List<Modul> module) {
 
         if (module.isEmpty()) {
@@ -30,7 +30,7 @@ public class KalenderController {
     }
 
     // Endpoint to export to .ics
-    @PutMapping("/kalender/export")
+    @PutMapping("/export")
     public String exportToICS(@RequestBody List<Modul> module) {
         // <TO-DO>: Add your implementation to export to .ics
         return null;

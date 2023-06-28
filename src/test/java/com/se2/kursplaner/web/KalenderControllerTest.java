@@ -99,7 +99,7 @@ public class KalenderControllerTest {
                 contentType("application/json").
 
         when().
-                put("/kalender/check").
+                put("/api/kalender/check").
 
         then().
                 statusCode(HttpStatus.BAD_REQUEST.value());
@@ -112,7 +112,7 @@ public class KalenderControllerTest {
                 body(List.of(modul1, modul3)).
 
         when().
-                put("/kalender/check").
+                put("/api/kalender/check").
 
         then().
                 statusCode(HttpStatus.OK.value()).
@@ -126,7 +126,7 @@ public class KalenderControllerTest {
                 body(List.of(modul1, modul2, modul3)).
 
         when().
-                put("/kalender/check").
+                put("/api/kalender/check").
 
         then().
                 statusCode(HttpStatus.OK.value()).
